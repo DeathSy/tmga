@@ -1,12 +1,12 @@
 {
   "db": {
-    "host": "127.0.0.1",
-    "port": 27017,
+    "host": "${MONGO_HOST}",
+    "port": "${MONGO_PORT}",
     "url": "",
-    "database": "tmga",
-    "password": "0847286333_a",
+    "database": "${MONGO_DATABASE}",
+    "password": "${MONGO_PASSWORD}",
     "name": "db",
-    "user": "deathsy",
+    "user": "${MONGO_USER}",
     "connector": "mongodb"
   }
 }
