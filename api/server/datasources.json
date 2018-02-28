@@ -1,0 +1,12 @@
+{
+  "db": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "url": "",
+    "database": "tmga",
+    "password": "0847286333_a",
+    "name": "db",
+    "user": "deathsy",
+    "connector": "mongodb"
+  }
+}
