@@ -10,7 +10,10 @@ const app = express()
 app.use(cors())
 app.use(urlencoded({ extended: true }))
 app.use(json())
-app.use(morgan('combined'))
+
+if (process.env.NODE_ENV !== 'test') {
+  app.use(morgan('combined'))
+}
 
 app.use('/api/v1', routes)
 
