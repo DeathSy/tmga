@@ -1,22 +1,31 @@
 pipeline {
   agent none
+
   stages {
-    stage ('Test') {
+    stage ('Install_App') {
       parallel {
-        stage ('A') {
+        stage ('Install: client-service') {
           agent none
           steps {
-            echo 'test a'
+            echo 'test client'
           }
         }
 
-        stage ('B') {
+        stage ('Install: api-service') {
           agent none
           steps {
-            echo 'test b'
+            echo 'test api'
+          }
+        }
+
+        stage ('Install: ml-service') {
+          agent none
+          steps {
+            echo 'test ml'
           }
         }
       }
     }
   }
+
 }
