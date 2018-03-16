@@ -10,7 +10,8 @@ pipeline {
           }
           steps {
             sh 'node -v'
-            sh 'cd client && npm install'
+            sh 'cd client'
+            sh 'npm install'
           }
         }
 
@@ -20,7 +21,8 @@ pipeline {
           }
           steps {
             sh 'node -v'
-            sh 'cd api && sudo npm install'
+            sh 'cd api'
+            sh 'npm install'
           }
         }
 
@@ -30,7 +32,8 @@ pipeline {
           }
           steps {
             sh 'python --version'
-            sh 'cd ml && sudo pip install -r ./requirements.txt'
+            sh 'cd ml'
+            sh 'pip install -r ./requirements.txt'
           }
         }
       }
