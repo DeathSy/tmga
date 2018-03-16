@@ -13,8 +13,7 @@ pipeline {
           }
           steps {
             sh 'node -v'
-            sh 'cd client'
-            sh 'npm install'
+            sh 'cd client && npm install'
           }
         }
 
@@ -27,19 +26,20 @@ pipeline {
           }
           steps {
             sh 'node -v'
-            sh 'cd api'
-            sh 'npm install'
+            sh 'cd api && npm install'
           }
         }
 
         stage ('Install: ml-service') {
           agent {
-            docker { image 'python:3.6.4-alpine'}
+            docker {
+              image 'python:3.6.4-alpine'
+              args '-u root'
+            }
           }
           steps {
             sh 'python --version'
-            sh 'cd ml'
-            sh 'pip install -r ./requirements.txt'
+            sh 'cd ml && pip install -r ./requirements.txt'
           }
         }
       }
