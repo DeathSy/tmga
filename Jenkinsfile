@@ -5,23 +5,29 @@ pipeline {
     stage ('Install_App') {
       parallel {
         stage ('Install: client-service') {
-          agent none
+          agent {
+            docker 'node:8.10.0-alpine'
+          }
           steps {
-            echo 'test client'
+            sh 'node -v'
           }
         }
 
         stage ('Install: api-service') {
-          agent none
+          agent {
+            docker 'node:8.10.0-alpine'
+          }
           steps {
-            echo 'test api'
+            sh 'node -v'
           }
         }
 
         stage ('Install: ml-service') {
-          agent none
+          agent {
+            docker 'python:3.6.4-alpine'
+          }
           steps {
-            echo 'test ml'
+            sh 'python --version'
           }
         }
       }
