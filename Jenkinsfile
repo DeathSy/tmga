@@ -1,4 +1,4 @@
-node('node') {
+pipeline {
   currentBuild.result = 'SUCCESS'
 
   try {
