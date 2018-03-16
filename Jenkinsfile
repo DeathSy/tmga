@@ -10,7 +10,7 @@ pipeline {
           }
           steps {
             sh 'node -v'
-            sh 'cd client && sudo npm install'
+            sh 'cd client && npm install'
           }
         }
 
