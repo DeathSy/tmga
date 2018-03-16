@@ -48,9 +48,38 @@ pipeline {
     stage ('Unit_Test') {
       parallel {
         stage ('Test: client-service') {
-          agent none
+          agent {
+            docker {
+              image 'node:8.10.0-alpine'
+              args '-u root'
+            }
+          }
           steps {
-            echo 'Test client'
+            sh 'cd client && npm run test:coverage'
+          }
+        }
+
+        stage ('Test: api-service') {
+          agent {
+            docker {
+              image 'node:8.10.0-alpine'
+              args '-u root'
+            }
+          }
+          steps {
+            sh 'cd api && npm run test:coverage'
+          }
+        }
+
+        stage ('Test: ml-service') {
+          agent {
+            docker {
+              image 'python:3.6.1-alpine'
+              args '-u root'
+            }
+          }
+          steps {
+            sh 'cd ml && py manage.py test'
           }
         }
 
