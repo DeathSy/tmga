@@ -5,14 +5,14 @@ pipeline {
       parallel {
         stage ('A') {
           agent none
-          step {
+          steps {
             sh 'echo a'
           }
         }
 
         stage ('B') {
           agent none
-          step {
+          steps {
             sh 'echo b'
           }
         }
