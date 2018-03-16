@@ -6,7 +6,10 @@ pipeline {
       parallel {
         stage ('Install: client-service') {
           agent {
-            docker 'node:8.10.0-alpine'
+            docker {
+              image 'node:8.10.0-alpine'
+              args '-u root'
+            }
           }
           steps {
             sh 'node -v'
@@ -17,7 +20,10 @@ pipeline {
 
         stage ('Install: api-service') {
           agent {
-            docker 'node:8.10.0-alpine'
+            docker {
+              image 'node:8.10.0-alpine'
+              args '-u root'
+            }
           }
           steps {
             sh 'node -v'
@@ -28,7 +34,7 @@ pipeline {
 
         stage ('Install: ml-service') {
           agent {
-            docker 'python:3.6.4-alpine'
+            docker { image 'python:3.6.4-alpine'}
           }
           steps {
             sh 'python --version'
