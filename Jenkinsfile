@@ -1,8 +1,12 @@
-pipeline {
-  agent none
-  stages {
-    stage ('Test') {
-      sh 'echo Test'
+stage ('Tmga Application CI') {
+  steps {
+    parallel {
+      a: {
+        echo 'Test A'
+      },
+      b: {
+        echo 'Test B'
+      }
     }
   }
 }
