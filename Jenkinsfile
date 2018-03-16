@@ -44,6 +44,18 @@ pipeline {
         }
       }
     }
+
+    stage ('Unit_Test') {
+      parallel {
+        stage ('Test: client-service') {
+          agent none
+          steps {
+            echo 'Test client'
+          }
+        }
+
+      }
+    }
   }
 
 }
