@@ -15,6 +15,7 @@ class MyDocument extends Document {
                 'minimum-scale=1, width=device-width, height=device-height'
             }
           />
+          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
         </Head>
         <body>
           <Main />
