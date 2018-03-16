@@ -1,12 +1,12 @@
 stage ('Tmga Application CI') {
   steps {
-    parallel {
+    parallel ( 
       a: {
         echo 'Test A'
       },
       b: {
         echo 'Test B'
       }
-    }
+    )
   }
 }
