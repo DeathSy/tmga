@@ -6,14 +6,14 @@ pipeline {
         stage ('A') {
           agent none
           steps {
-            sh 'echo a'
+            sh 'echo "Test"'
           }
         }
 
         stage ('B') {
           agent none
           steps {
-            sh 'echo b'
+            sh 'echo "Test"'
           }
         }
       }
