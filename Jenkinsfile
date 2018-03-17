@@ -57,6 +57,7 @@ pipeline {
             }
           }
           steps {
+            sh 'cd client && npm install'
             sh 'cd client && npm run test:coverage'
           }
         }
@@ -69,6 +70,8 @@ pipeline {
             }
           }
           steps {
+            sh 'cd api && npm install'
+            sh 'cd api && cp .env.example .env'
             sh 'cd api && npm run test:coverage'
           }
         }
@@ -81,6 +84,7 @@ pipeline {
             }
           }
           steps {
+            sh 'cd ml && pip install -r ./requirements.txt'
             sh 'cd ml && python manage.py test'
           }
         }
