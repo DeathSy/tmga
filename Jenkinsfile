@@ -14,10 +14,6 @@ pipeline {
             }
           }
           steps {
-            dir {
-              path 'client'
-              sh 'pwd'
-            }
             sh 'node -v'
             sh 'cd client && npm install'
           }
