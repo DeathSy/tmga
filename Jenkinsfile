@@ -16,9 +16,10 @@ pipeline {
           steps {
             dir {
               path 'client'
-              sh 'node -v'
-              sh 'npm install'
+              sh 'pwd'
             }
+            sh 'node -v'
+            sh 'cd client && npm install'
           }
         }
 
@@ -30,11 +31,8 @@ pipeline {
             }
           }
           steps {
-            dir {
-              path 'api'
-              sh 'node -v'
-              sh 'npm install'
-            }
+            sh 'node -v'
+            sh 'cd api && npm install'
           }
         }
 
@@ -46,11 +44,8 @@ pipeline {
             }
           }
           steps {
-            dir {
-              path 'ml'
-              sh 'python --version'
-              sh 'pip install -r ./requirements.txt'
-            }
+            sh 'python --version'
+            sh 'cd ml && pip install -r ./requirements.txt'
           }
         }
       }
