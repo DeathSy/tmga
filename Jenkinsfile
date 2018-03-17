@@ -14,7 +14,7 @@ pipeline {
             }
           }
           steps {
-            chcekout scm
+            checkout scm
             sh 'node -v'
             sh 'cd client && npm install'
             stash includes: 'client/node_modules/', name: 'client_node_modules'
@@ -29,7 +29,7 @@ pipeline {
             }
           }
           steps {
-            chcekout scm
+            checkout scm
             sh 'node -v'
             sh 'cd api && npm install'
             stash includes: 'api/node_modules/', name: 'api_node_modules'
@@ -44,7 +44,7 @@ pipeline {
             }
           }
           steps {
-            chcekout scm
+            checkout scm
             sh 'python --version'
             sh 'cd ml && pip install -r ./requirements.txt'
           }
