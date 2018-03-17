@@ -1,3 +1,5 @@
+#!groovy​
+
 pipeline {
   agent none
 
@@ -79,7 +81,7 @@ pipeline {
             }
           }
           steps {
-            sh 'cd ml && py manage.py test'
+            sh 'cd ml && python manage.py test'
           }
         }
 
