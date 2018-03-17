@@ -13,11 +13,10 @@ pipeline {
               args '-u root'
             }
           }
-          steps {
+          dir ('client') {
             checkout scm
             sh 'node -v'
             sh 'cd client && npm install'
-            stash includes: 'client/node_modules/', name: 'client_node_modules'
           }
         }
 
@@ -32,7 +31,6 @@ pipeline {
             checkout scm
             sh 'node -v'
             sh 'cd api && npm install'
-            stash includes: 'api/node_modules/', name: 'api_node_modules'
           }
         }
 
@@ -62,8 +60,6 @@ pipeline {
             }
           }
           steps {
-            sh 'chmod -R u+w .git'
-            unstash 'client_node_modules'
             sh 'cd client && npm run test:coverage'
           }
         }
@@ -76,8 +72,6 @@ pipeline {
             }
           }
           steps {
-            sh 'chmod -R u+w .git'
-            unstash 'api_node_modules'
             sh 'cd api && cp .env.example .env'
             sh 'cd api && npm run test:coverage'
           }
