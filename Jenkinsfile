@@ -13,8 +13,7 @@ pipeline {
               args '-u root'
             }
           }
-          dir {
-            path 'client'
+          dir ('client') {
             sh 'node -v'
             sh 'npm install'
           }
