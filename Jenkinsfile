@@ -62,7 +62,7 @@ pipeline {
             }
           }
           steps {
-            sh 'cd client && chmod -R u+w .git'
+            sh 'chmod -R u+w .git'
             unstash 'client_node_modules'
             sh 'cd client && npm run test:coverage'
           }
@@ -76,7 +76,7 @@ pipeline {
             }
           }
           steps {
-            sh 'cd api && chmod -R u+w .git'
+            sh 'chmod -R u+w .git'
             unstash 'api_node_modules'
             sh 'cd api && cp .env.example .env'
             sh 'cd api && npm run test:coverage'
