@@ -5,8 +5,8 @@ const TimetableList = () => (
   <Table basic='very' fixed style={{"width": "750px", "overflow": "scroll", "margin":"50px"}} >
     <Table.Header style={{"font-size":"20px"}}>
       <Table.Row >
-        <Table.HeaderCell width={12} style={{"padding":"20px"}}>Semester</Table.HeaderCell>
-        <Table.HeaderCell style={{"padding":"20px"}}>Status</Table.HeaderCell>
+        <Table.HeaderCell width={12} style={{"padding-left":"20px"}}>Semester</Table.HeaderCell>
+        <Table.HeaderCell style={{"padding-left":"20px"}}>Status</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
     <Table.Body>
