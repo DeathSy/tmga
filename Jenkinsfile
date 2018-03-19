@@ -5,16 +5,21 @@ pipeline {
 
   stages {
     stage ('Install') {
-      agent {
-        docker {
-          image 'node:8.10.0-alpine'
+      parallel {
+        stage ('Install: client') {
+          agent {
+            docker {
+              image 'node:8.10.0-alpine'
+            }
+          }
+          steps {
+            dir ('client') {
+              sh 'node -v'
+              sh 'npm install'
+            }
+          }
         }
-      }
-      steps {
-        dir ('client') {
-          sh 'pwd'
-          sh 'node -v'
-        }
+
       }
     }
   }
