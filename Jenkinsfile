@@ -6,21 +6,6 @@ pipeline {
   stages {
     stage ('Install') {
       parallel {
-        stage ('Install: client') {
-          agent {
-            docker {
-              image 'node:8.10.0-alpine'
-              args '-u root'
-            }
-          }
-          steps {
-            dir ('client') {
-              sh 'node -v'
-              sh 'npm install'
-            }
-          }
-        }
-
         stage ('Install: api') {
           agent {
             docker {
@@ -32,6 +17,21 @@ pipeline {
             dir ('api') {
               sh 'node -v'
               sh 'pwd'
+            }
+          }
+        }
+
+        stage ('Install: client') {
+          agent {
+            docker {
+              image 'node:8.10.0-alpine'
+              args '-u root'
+            }
+          }
+          steps {
+            dir ('client') {
+              sh 'node -v'
+              sh 'npm install'
             }
           }
         }
