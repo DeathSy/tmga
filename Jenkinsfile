@@ -53,5 +53,24 @@ pipeline {
 
       }
     }
+
+    stage ('Unit Test') {
+      parallel {
+        stage ('Test: api') {
+          agent {
+            docker {
+              image 'node:8.10.0-alpine'
+              args '-u root'
+            }
+          }
+          steps {
+            dir ('api') {
+              sh 'node -v'
+            }
+          }
+        }
+      }
+    }
+
   }
 }
