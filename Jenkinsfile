@@ -68,6 +68,7 @@ pipeline {
           steps {
             dir ('api') {
               sh 'node -v'
+              unstash 'api'
             }
           }
         }
@@ -82,6 +83,7 @@ pipeline {
           steps {
             dir ('client') {
               sh 'node -v'
+              unstash 'client'
             }
           }
         }
