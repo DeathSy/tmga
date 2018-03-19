@@ -7,6 +7,4 @@ const mapStateToProps = state => ({})
 
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch)
 
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps)
-)(Timetable)
+export default compose(connect(mapStateToProps, mapDispatchToProps))(Timetable)

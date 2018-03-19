@@ -7,6 +7,4 @@ const mapStateToProps = state => ({})
 
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch)
 
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps)
-)(Home)
+export default compose(connect(mapStateToProps, mapDispatchToProps))(Home)
