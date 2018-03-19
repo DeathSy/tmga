@@ -21,20 +21,6 @@ pipeline {
           }
         }
 
-        stage ('Install: api') {
-          agent {
-            docker {
-              image 'node:8.10.0-alpine'
-              args '-u root'
-            }
-            steps {
-              dir ('api') {
-                sh 'node -v'
-                sh 'npm install'
-              }
-            }
-          }
-        }
 
       }
     }
