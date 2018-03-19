@@ -96,8 +96,7 @@ pipeline {
           steps {
             dir ('ml') {
               sh 'pip install -r requirements.txt'
-              sh 'make --help'
-              sh 'make test-lint'
+              sh 'pylint api/models.py api/serializers.py api/urls.py'
             }
           }
         }
@@ -152,7 +151,8 @@ pipeline {
           steps {
             dir ('ml') {
               sh 'pip install -r requirements.txt'
-              sh 'make test-coverage'
+              sh 'coverage run --source='.' manage.py test api'
+              sh 'coverage html --omit=ml/wsgi.py,manage.py,api/apps.py'
             }
           }
         }
