@@ -54,6 +54,40 @@ pipeline {
       }
     }
 
+    stage ('Lint Test') {
+      parallel {
+        stage ('Test: api') {
+          agent {
+            docker {
+              image 'node:8.10.0-alpine'
+              args '-u root'
+            }
+          }
+          steps {
+            dir ('api') {
+              sh 'npm install'
+              sh 'npm run test:lint'
+            }
+          }
+        }
+
+        stage ('Test: client') {
+          agent {
+            docker {
+              image 'node:8.10.0-alpine'
+              args '-u root'
+            }
+          }
+          steps {
+            dir ('client') {
+              sh 'npm install'
+              sh 'npm run test:lint'
+            }
+          }
+        }
+      }
+    }
+
     stage ('Unit Test') {
       parallel {
         stage ('Test: api') {
@@ -69,7 +103,6 @@ pipeline {
           steps {
             dir ('api') {
               sh 'npm install'
-              sh 'cp .env.example .env'
               sh 'npm run test:coverage'
             }
           }
