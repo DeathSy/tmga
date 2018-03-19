@@ -104,6 +104,7 @@ pipeline {
           steps {
             dir ('ml') {
               sh 'pip install -r requirements.txt'
+              sh 'python manage.py test'
             }
           }
         }
