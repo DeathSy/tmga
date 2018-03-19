@@ -42,8 +42,11 @@ pipeline {
               image 'python:3.6.4-alpine'
               args '-u root'
             }
-            steps {
+          }
+          steps {
+            dir ('ml') {
               sh 'python --version'
+              sh 'pip install -r requirements.txt'
             }
           }
         }
