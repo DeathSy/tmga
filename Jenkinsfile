@@ -65,10 +65,12 @@ pipeline {
               args '-u root'
             }
           }
+          environment {
+            NODE_ENV = 'test'
+          }
           steps {
             dir ('api') {
-              sh 'node -v'
-              unstash 'api'
+              sh 'npm install'
             }
           }
         }
@@ -80,10 +82,12 @@ pipeline {
               args '-u root'
             }
           }
+          environment {
+            NODE_ENV = 'test'
+          }
           steps {
             dir ('client') {
-              sh 'node -v'
-              unstash 'client'
+              sh 'npm install'
             }
           }
         }
@@ -97,7 +101,7 @@ pipeline {
           }
           steps {
             dir ('ml') {
-              sh 'python --version'
+              sh 'pip install -r requirements.txt'
             }
           }
         }
