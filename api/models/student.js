@@ -1,4 +1,4 @@
-import { mongoose } from '../config'
+import mongoose from 'mongoose'
 
 export const studentSchema = mongoose.Schema({
   studentId: {

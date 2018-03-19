@@ -1,3 +1,4 @@
+import './config/mongoose'
 import app from './app'
 
 const port = process.env.PORT || 4000
