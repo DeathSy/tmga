@@ -49,7 +49,6 @@ pipeline {
             dir ('ml') {
               sh 'python --version'
               sh 'pip install -r requirements.txt'
-              stash includes: '/usr/local/lib/python3.6/site-packages/', name: 'ml'
             }
           }
         }
