@@ -30,6 +30,7 @@ pipeline {
           }
           steps {
             sh 'node -v'
+            sh 'pwd'
           }
         }
 
