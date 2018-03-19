@@ -49,8 +49,7 @@ pipeline {
             dir ('ml') {
               sh 'python --version'
               sh 'pip install -r requirements.txt'
-              sh 'pip show django'
-              stash includes: '/usr/local/lib/python3.6/dist-packages/', name: 'ml'
+              stash includes: '/usr/local/lib/python3.6/site-packages/', name: 'ml'
             }
           }
         }
