@@ -119,6 +119,7 @@ pipeline {
             dir ('api') {
               sh 'npm install'
               sh 'npm run test:coverage'
+              junit 'coverage/clover.xml'
             }
           }
         }
@@ -137,6 +138,7 @@ pipeline {
             dir ('client') {
               sh 'npm install'
               sh 'npm run test:coverage'
+              junit 'coverage/clover.xml'
             }
           }
         }
@@ -152,7 +154,8 @@ pipeline {
             dir ('ml') {
               sh 'pip install -r requirements.txt'
               sh 'coverage run --source='.' manage.py test api'
-              sh 'coverage html --omit=ml/wsgi.py,manage.py,api/apps.py'
+              sh 'coverage xml --omit=ml/wsgi.py,manage.py,api/apps.py'
+              junit 'coverage.xml'
             }
           }
         }
