@@ -36,6 +36,21 @@ pipeline {
           }
         }
 
+        stage ('Install: ml') {
+          agent {
+            docker {
+              image 'python:3.6.4-alpine'
+              args '-u root'
+            }
+            steps {
+              dir ('ml') {
+                sh 'python --version'
+                sh 'pip install -r requirements.txt'
+              }
+            }
+          }
+        }
+
       }
     }
   }
