@@ -17,7 +17,6 @@ pipeline {
             dir ('api') {
               sh 'node -v'
               sh 'npm install'
-              stash includes: 'node_modules/', name: 'api'
             }
           }
         }
@@ -33,7 +32,6 @@ pipeline {
             dir ('client') {
               sh 'node -v'
               sh 'npm install'
-              stash includes: 'node_modules/', name: 'client'
             }
           }
         }
