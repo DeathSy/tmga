@@ -30,6 +30,7 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^22.4.2",
+    "jest-junit": "^3.6.0",
     "nodemon": "^1.17.1",
     "rimraf": "^2.6.2",
     "superagent": "^3.8.2",
@@ -37,7 +38,7 @@
   },
   "scripts": {
     "test:lint": "eslint controllers/*.js models/*.js routes/*.js app.js index.js",
-    "test:coverage": "jest --coverage",
+    "test:coverage": "jest --testResultsProcessor jest-junit --coverage",
     "test:watch": "jest --watch",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "start": "node dist/index.js",
