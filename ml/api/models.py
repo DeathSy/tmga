@@ -6,5 +6,6 @@ class Bucketlist(models.Model):
     createdAt = models.DateTimeField(auto_now_add=True)
     updatedAt = models.DateTimeField(auto_now_add=True)
 
+
 def __str__(self):
-  return '{}'.format(self.name)
+    return '{}'.format(self.name)
