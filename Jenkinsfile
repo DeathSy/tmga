@@ -49,7 +49,7 @@ pipeline {
             dir ('ml') {
               sh 'python --version'
               sh 'pip install -r requirements.txt'
-              sh "ls /usr/local/lib | grep 'python'"
+              stash '/usr/local/lib/3.6/dist/packages'
             }
           }
         }
