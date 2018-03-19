@@ -71,6 +71,7 @@ pipeline {
           steps {
             dir ('api') {
               sh 'npm install'
+              sh 'npm run test:coverage'
             }
           }
         }
@@ -88,6 +89,7 @@ pipeline {
           steps {
             dir ('client') {
               sh 'npm install'
+              sh 'npm run test:coverage'
             }
           }
         }
