@@ -69,6 +69,34 @@ pipeline {
             }
           }
         }
+
+        stage ('Test: client') {
+          agent {
+            docker {
+              image 'node:8.10.0-alpine'
+              args '-u root'
+            }
+          }
+          steps {
+            dir ('client') {
+              sh 'node -v'
+            }
+          }
+        }
+
+        stage ('Test: ml') {
+          agent {
+            docker {
+              image 'python:3.6.4-alpine'
+              args '-u root'
+            }
+          }
+          steps {
+            dir ('ml') {
+              sh 'python --version'
+            }
+          }
+        }
       }
     }
 
