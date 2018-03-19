@@ -12,7 +12,7 @@ export default class SidebarMenu extends Component {
     return (
       <Sidebar as={Menu} width='wide' visible={true} vertical inverted color='blue'>
         <Menu.Item name='Logo'>
-          <Icon name='Logo' />
+          <Icon />
         </Menu.Item>
         <Menu.Item name='Home' active={activeItem === 'home'} onClick={this.handleItemClick} />
         <Menu.Item name='Timetable Editor' active={activeItem === 'Timetable Editor'} onClick={this.handleItemClick} />
