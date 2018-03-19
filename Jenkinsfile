@@ -11,7 +11,10 @@ pipeline {
         }
       }
       steps {
-        sh 'node -v'
+        dir ('client') {
+          sh 'pwd'
+          sh 'node -v'
+        }
       }
     }
   }
