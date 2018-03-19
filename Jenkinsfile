@@ -69,6 +69,7 @@ pipeline {
           steps {
             dir ('api') {
               sh 'npm install'
+              sh 'cp .env.example .env'
               sh 'npm run test:coverage'
             }
           }
