@@ -16,7 +16,8 @@ pipeline {
           steps {
             dir ('api') {
               sh 'node -v'
-              sh 'pwd'
+              sh 'npm install'
+              stash includes: 'node_modules/', name: 'api'
             }
           }
         }
@@ -32,6 +33,7 @@ pipeline {
             dir ('client') {
               sh 'node -v'
               sh 'npm install'
+              stash includes: 'node_modules/', name: 'client'
             }
           }
         }
@@ -47,6 +49,7 @@ pipeline {
             dir ('ml') {
               sh 'python --version'
               sh 'pip install -r requirements.txt'
+              sh "ls /usr/local/lib | grep 'python'"
             }
           }
         }
