@@ -29,8 +29,10 @@ pipeline {
             }
           }
           steps {
-            sh 'node -v'
-            sh 'pwd'
+            dir ('api') {
+              sh 'node -v'
+              sh 'pwd'
+            }
           }
         }
 
