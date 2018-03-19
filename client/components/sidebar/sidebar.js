@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Sidebar, Segment, Button, Menu, Image, Icon, Header } from 'semantic-ui-react'
 
-export default class MenuExampleTabularOnLeft extends Component {
+export default class SidebarMenu extends Component {
   state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -10,7 +10,7 @@ export default class MenuExampleTabularOnLeft extends Component {
     const { activeItem } = this.state
 
     return (
-      <Sidebar as={Menu} width='wide' visible={true} icon='labeled' vertical inverted color='blue'>
+      <Sidebar as={Menu} width='wide' visible={true} vertical inverted color='blue'>
         <Menu.Item name='Logo'>
           <Icon name='Logo' />
         </Menu.Item>
