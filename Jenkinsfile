@@ -96,6 +96,7 @@ pipeline {
           steps {
             dir ('ml') {
               sh 'pip install -r requirements.txt'
+              sh 'make --help'
               sh 'make test-lint'
             }
           }
