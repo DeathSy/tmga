@@ -85,6 +85,21 @@ pipeline {
             }
           }
         }
+
+        stage ('Test: ml') {
+          agent {
+            docker {
+              image 'python:3.6.4-alpine'
+              args '-u root'
+            }
+          }
+          steps {
+            dir ('ml') {
+              sh 'pip install -r requirements.txt'
+              sh 'make test-lint'
+            }
+          }
+        }
       }
     }
 
@@ -136,7 +151,7 @@ pipeline {
           steps {
             dir ('ml') {
               sh 'pip install -r requirements.txt'
-              sh 'python manage.py test'
+              sh 'make test-coverage'
             }
           }
         }
