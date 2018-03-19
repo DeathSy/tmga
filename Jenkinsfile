@@ -43,10 +43,7 @@ pipeline {
               args '-u root'
             }
             steps {
-              dir ('ml') {
-                sh 'python --version'
-                sh 'pip install -r requirements.txt'
-              }
+              sh 'python --version'
             }
           }
         }
