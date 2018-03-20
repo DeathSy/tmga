@@ -13,7 +13,11 @@ exports[`Test Root Component should render Home component 1`] = `
         >
           <i
             aria-hidden="true"
+<<<<<<< HEAD
             className="icon"
+=======
+            className="Logo icon"
+>>>>>>> feature/modal
           />
         </div>
         <a
@@ -157,7 +161,15 @@ exports[`Test Root Component should render Home component 1`] = `
       <button
         className="ui primary button"
         disabled={undefined}
+<<<<<<< HEAD
         onClick={[Function]}
+=======
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+>>>>>>> feature/modal
         role="button"
         style={
           Object {
