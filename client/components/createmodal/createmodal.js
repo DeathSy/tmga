@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Header, Image, Modal, Checkbox, Card, Dropdown, Accordion, Icon } from 'semantic-ui-react'
+import { Button, Header, Image, Modal, Checkbox, Card, Dropdown, Accordion, Icon, Input } from 'semantic-ui-react'
 
 export default class CreateModal extends Component {
     state = { activeIndex: -1 }
@@ -24,6 +24,7 @@ export default class CreateModal extends Component {
         return (
             <Modal trigger={<Button primary style={{ 'float': 'right', 'marginRight': '62px' }}>Create a timetable</Button>} size='small' closeIcon>
                 <Modal.Header scrolling>Create a timetable</Modal.Header>
+                <Input size='mini' placeholder='Search...' style={{'float':'right','margin':'12px 20px'}}  icon={{ name: 'search', link: true }} />
                 <Modal.Content>
                     <p> Semester: <Dropdown inline  defaultValue={options[0].value} options={options} style={{'width':'auto'}}/></p>
                     <Accordion styled style={{'width':'auto'}}>
@@ -46,7 +47,7 @@ export default class CreateModal extends Component {
 
                         </Accordion.Content>
                     </Accordion>
-                    <Button primary style={{ 'float': 'right', 'margin': '30px' }}>Create a timetable</Button>
+                    <Button primary style={{ 'float': 'right', 'margin': '20px 0px' }}>Create a timetable</Button>
                 </Modal.Content>
             </Modal>
         )
