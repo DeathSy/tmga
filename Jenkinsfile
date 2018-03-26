@@ -152,7 +152,6 @@ pipeline {
             dir ('ml') {
               sh 'pip install -r requirements.txt'
               sh 'coverage run --source='.' manage.py test api'
-              sh 'coverage html --omit=ml/wsgi.py,manage.py,api/apps.py'
             }
           }
         }
