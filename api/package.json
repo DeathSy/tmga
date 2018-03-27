@@ -38,10 +38,13 @@
   },
   "scripts": {
     "test:lint": "eslint controllers/*.js models/*.js routes/*.js app.js index.js",
-    "test:coverage": "jest --testResultsProcessor jest-junit --coverage",
+    "test:coverage": "jest",
     "test:watch": "jest --watch",
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "start": "node dist/index.js",
     "dev": "nodemon --exec babel-node -- ./index.js"
+  },
+  "jest-junit": {
+    "output": "./coverage/junit.xml"
   }
 }

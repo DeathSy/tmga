@@ -119,6 +119,7 @@ pipeline {
             dir ('api') {
               sh 'npm install'
               sh 'npm run test:coverage'
+              junit 'coverage/junit.xml'
             }
           }
         }
