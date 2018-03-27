@@ -10,9 +10,19 @@ def installPython () {
   sh 'pip install -r requirements.txt'
 }
 
-def unitTestNode () {
-  sh 'npm run test:coverage'
-  junit 'coverage/junit.xml'
+def unitTestNode (serviceName) {
+  steps {
+    dir (serviceName) {
+      installNode()
+      sh 'npm run test:coverage'
+      junit 'coverage/junit.xml'
+    }
+  }
+}
+
+def unitTestPython () {
+  installPython()
+  sh "coverage run --source='.' manage.py test api"
 }
 
 pipeline {
@@ -127,13 +137,7 @@ pipeline {
           environment {
             NODE_ENV = 'test'
           }
-          steps {
-            dir ('api') {
-              sh 'npm install'
-              sh 'npm run test:coverage'
-              junit 'coverage/junit.xml'
-            }
-          }
+          unitTestNode('api')
         }
 
         stage ('Test: client') {
@@ -146,13 +150,7 @@ pipeline {
           environment {
             NODE_ENV = 'test'
           }
-          steps {
-            dir ('client') {
-              sh 'npm install'
-              sh 'npm run test:coverage'
-              junit 'coverage/junit.xml'
-            }
-          }
+          unitTestNode('client')
         }
 
         stage ('Test: ml') {
@@ -164,8 +162,7 @@ pipeline {
           }
           steps {
             dir ('ml') {
-              sh 'pip install -r requirements.txt'
-              sh "coverage run --source='.' manage.py test api"
+              unitTestPython()
             }
           }
         }
