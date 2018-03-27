@@ -120,7 +120,7 @@ pipeline {
           }
           steps {
             dir ('ml') {
-              installPython()
+              installPython('ml')
               sh 'pylint api/models.py api/serializers.py api/urls.py'
             }
           }
