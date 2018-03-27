@@ -18,9 +18,11 @@ def unitTestNode (serviceName) {
   }
 }
 
-def unitTestPython () {
-  installPython()
-  sh "coverage run --source='.' manage.py test api"
+def unitTestPython (serviceName) {
+  dir (serviceName) {
+    installPython()
+    sh "coverage run --source='.' manage.py test api"
+  }
 }
 
 pipeline {
@@ -163,9 +165,7 @@ pipeline {
             }
           }
           steps {
-            dir ('ml') {
-              unitTestPython()
-            }
+            unitTestPython()
           }
         }
       }
