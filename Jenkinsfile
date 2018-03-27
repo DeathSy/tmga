@@ -1,12 +1,5 @@
 #!groovy​
 
-def nodeAgent () {
-  docker {
-    image 'node:8.10.0-alpine'
-    args '-u root'
-  }
-}
-
 def installNode () {
   sh 'node -v'
   sh 'npm install'
@@ -30,7 +23,10 @@ pipeline {
       parallel {
         stage ('Install: api') {
           agent {
-            nodeAgent()
+            docker {
+              image 'node:8.10.0-alpine'
+              args '-u root'
+            }
           }
           steps {
             dir ('api') {
