@@ -10,4 +10,4 @@ install-node:
 
 install-python:	
 	docker image build -t python_build -f ./build/Dockerfile.python .
-	docker container run --rm -v $(shell pwd)/$(service):/app python_build install -r ./$(service)/requirements.txt
+	docker container run --rm -v $(shell pwd)/$(service):/app python_build install -r app/requirements.txt
