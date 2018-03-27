@@ -179,27 +179,21 @@ pipeline {
         stage ('Build: client-image') {
           agent any
           steps {
-            dir ('client') {
-              sh 'make install-node service=client'
-            }
+            sh 'make install-node service=client'
           }
         }
 
         stage ('Build: api-image') {
           agent any
           steps {
-            dir ('api') {
-              sh 'make install-node service=api'
-            }
+            sh 'make install-node service=api'
           }
         }
         
         stage ('Build: ml-image') {
           agent any
           steps {
-            dir ('ml') {
-              sh 'make install-python sesrvice=ml'
-            }
+            sh 'make install-python sesrvice=ml'
           }
         }
 
