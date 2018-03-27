@@ -1,5 +1,19 @@
 #!groovy​
 
+def nodeAgent = {
+  docker {
+    image 'node:8.10.0-alpine'
+    args '-u root'
+  }
+}
+
+def pythonAgent = {
+  docker {              
+    image 'python:3.6.4-alpine'
+    args '-u root'
+  }
+}
+
 def installNode () {
   sh 'node -v'
   sh 'npm install'
@@ -10,6 +24,11 @@ def installPython () {
   sh 'pip install -r requirements.txt'
 }
 
+def unitTestNode () {
+  sh 'npm run test:coverage'
+  junit 'coverage/junit.xml'
+}
+
 pipeline {
   agent any
 
@@ -17,12 +36,7 @@ pipeline {
     stage ('Install') {
       parallel {
         stage ('Install: api') {
-          agent {
-            docker {
-              image 'node:8.10.0-alpine'
-              args '-u root'
-            }
-          }
+          agent nodeAgent
           steps {
             dir ('api') {
               installNode()
