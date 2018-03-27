@@ -11,12 +11,10 @@ def installPython () {
 }
 
 def unitTestNode (serviceName) {
-  steps {
-    dir (serviceName) {
-      installNode()
-      sh 'npm run test:coverage'
-      junit 'coverage/junit.xml'
-    }
+  dir (serviceName) {
+    installNode()
+    sh 'npm run test:coverage'
+    junit 'coverage/junit.xml'
   }
 }
 
@@ -137,7 +135,9 @@ pipeline {
           environment {
             NODE_ENV = 'test'
           }
-          unitTestNode('api')
+          steps {
+            unitTestNode('api')
+          }
         }
 
         stage ('Test: client') {
@@ -150,7 +150,9 @@ pipeline {
           environment {
             NODE_ENV = 'test'
           }
-          unitTestNode('client')
+          steps {
+            unitTestNode('client')
+          }
         }
 
         stage ('Test: ml') {
