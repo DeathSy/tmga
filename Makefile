@@ -12,8 +12,8 @@ build-node:
 	docker container run --rm -v $(shell pwd)/$(service):/app node_build install --production
 	docker container run --rm -v $(shell pwd)/$(service):/app node_build build
 	docker image build -t tmga-$(service) ./$(service)
-	docker tag ${REPOSITORY}/$(service)-tmga ${REPOSITORY}/$(service)-tmga:latest
+	docker tag ${REPOSITORY}/tmga-$(service) ${REPOSITORY}/$(service)-tmga:latest
 
 build-python:	
 	docker image build -t tmga-$(service) ./$(service)
-	docker tag ${REPOSITORY}/$(service)-tmga ${REPOSITORY}/$(service)-tmga:latest
+	docker tag ${REPOSITORY}/tmga-$(service) ${REPOSITORY}/$(service)-tmga:latest
