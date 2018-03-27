@@ -151,7 +151,7 @@ pipeline {
           steps {
             dir ('ml') {
               sh 'pip install -r requirements.txt'
-              sh 'coverage run --source='.' manage.py test api'
+              sh "coverage run --source='.' manage.py test api"
             }
           }
         }
