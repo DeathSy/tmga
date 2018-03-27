@@ -6,8 +6,8 @@ db-start:
 
 install-node:
 	docker image build -t node_build -f ./build/Dockerfile.node .
-	docker container run --rm -v $(shell pwd)/$(service):/app install --production
+	docker container run --rm -v $(shell pwd)/$(service):/app node_build install --production
 
 install-python:	
 	docker image build -t python_build -f ./build/Dockerfile.python .
-	docker container run --rm -v $(shell pwd)/$(service):/app install -r $(shell pwd)/$(service)/requirements.txt
+	docker container run --rm -v $(shell pwd)/$(service):/app python_build install -r $(shell pwd)/$(service)/requirements.txt
