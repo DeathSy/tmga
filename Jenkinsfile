@@ -1,15 +1,8 @@
 #!groovy​
 
-nodeAgent = {
+def nodeAgent () {
   docker {
     image 'node:8.10.0-alpine'
-    args '-u root'
-  }
-}
-
-pythonAgent = {
-  docker {              
-    image 'python:3.6.4-alpine'
     args '-u root'
   }
 }
@@ -36,7 +29,9 @@ pipeline {
     stage ('Install') {
       parallel {
         stage ('Install: api') {
-          agent nodeAgent
+          agent {
+            nodeAgent()
+          }
           steps {
             dir ('api') {
               installNode()
