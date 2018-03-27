@@ -179,7 +179,7 @@ pipeline {
         stage ('Build: client-image') {
           agent any
           steps {
-            sh 'make install-node service=client'
+            sh 'make build-node service=client'
           }
         }
 

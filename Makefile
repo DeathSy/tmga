@@ -10,11 +10,10 @@ db-start:
 build-node:
 	docker image build -t node_build -f ./build/Dockerfile.node .
 	docker container run --rm -v $(shell pwd)/$(service):/app node_build install --production
+	docker container run --rm -v $(shell pwd)/$(service):/app node_build build
 	docker image build -t tmga-$(service) ./$(service)
 	docker tag ${REPOSITORY}/$(service)-tmga ${REPOSITORY}/$(service)-tmga:latest
 
 build-python:	
-	docker image build -t python_build -f ./build/Dockerfile.python .
-	docker container run --rm -v $(shell pwd)/$(service):/app python_build install -r /app/requirements.txt
 	docker image build -t tmga-$(service) ./$(service)
 	docker tag ${REPOSITORY}/$(service)-tmga ${REPOSITORY}/$(service)-tmga:latest
