@@ -180,7 +180,7 @@ pipeline {
           agent any
           steps {
             dir ('client') {
-              sh 'make install-node'
+              sh 'docker info'
             }
           }
         }
@@ -189,7 +189,7 @@ pipeline {
           agent any
           steps {
             dir ('api') {
-              sh 'npm install --production'
+              sh 'docker info'
             }
           }
         }
@@ -198,7 +198,7 @@ pipeline {
           agent any
           steps {
             dir ('ml') {
-              installPython()
+              sh 'docker info'
             }
           }
         }
