@@ -174,5 +174,37 @@ pipeline {
       }
     }
 
+    stage ('Build docker image') {
+      parallel {
+        stage ('Build: client-image') {
+          agent any
+          steps {
+            dir ('client') {
+              sh 'make install-node'
+            }
+          }
+        }
+
+        stage ('Build: api-image') {
+          agent any
+          steps {
+            dir ('api') {
+              sh 'npm install --production'
+            }
+          }
+        }
+        
+        stage ('Build: ml-image') {
+          agent any
+          steps {
+            dir ('ml') {
+              installPython()
+            }
+          }
+        }
+
+      }
+    }
+
   }
 }
