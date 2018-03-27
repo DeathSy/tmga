@@ -186,14 +186,14 @@ pipeline {
         stage ('Build: api-image') {
           agent any
           steps {
-            sh 'make install-node service=api'
+            sh 'make build-node service=api'
           }
         }
         
         stage ('Build: ml-image') {
           agent any
           steps {
-            sh 'make install-python service=ml'
+            sh 'make build-python service=ml'
           }
         }
 
