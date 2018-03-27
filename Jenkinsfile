@@ -1,13 +1,13 @@
 #!groovy​
 
-def nodeAgent = {
+nodeAgent = {
   docker {
     image 'node:8.10.0-alpine'
     args '-u root'
   }
 }
 
-def pythonAgent = {
+pythonAgent = {
   docker {              
     image 'python:3.6.4-alpine'
     args '-u root'
