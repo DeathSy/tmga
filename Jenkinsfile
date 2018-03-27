@@ -1,5 +1,8 @@
 #!groovy​
 
+String nodeImage = 'node:8.10.0-alpine'
+String pythonImage = 'python:3.6.4-alpine'
+
 def installNode () {
   sh 'node -v'
   sh 'npm install'
@@ -34,7 +37,7 @@ pipeline {
         stage ('Install: api') {
           agent {
             docker {
-              image 'node:8.10.0-alpine'
+              image nodeImage
               args '-u root'
             }
           }
@@ -48,7 +51,7 @@ pipeline {
         stage ('Install: client') {
           agent {
             docker {
-              image 'node:8.10.0-alpine'
+              image nodeImage
               args '-u root'
             }
           }
@@ -62,7 +65,7 @@ pipeline {
         stage ('Install: ml') {
           agent {
             docker {
-              image 'python:3.6.4-alpine'
+              image pythonImage
               args '-u root'
             }
           }
@@ -81,7 +84,7 @@ pipeline {
         stage ('Test: api') {
           agent {
             docker {
-              image 'node:8.10.0-alpine'
+              image nodeImage
               args '-u root'
             }
           }
@@ -96,7 +99,7 @@ pipeline {
         stage ('Test: client') {
           agent {
             docker {
-              image 'node:8.10.0-alpine'
+              image nodeImage
               args '-u root'
             }
           }
@@ -111,7 +114,7 @@ pipeline {
         stage ('Test: ml') {
           agent {
             docker {
-              image 'python:3.6.4-alpine'
+              image pythonImage
               args '-u root'
             }
           }
@@ -130,7 +133,7 @@ pipeline {
         stage ('Test: api') {
           agent {
             docker {
-              image 'node:8.10.0-alpine'
+              image nodeImage
               args '-u root'
             }
           }
@@ -145,7 +148,7 @@ pipeline {
         stage ('Test: client') {
           agent {
             docker {
-              image 'node:8.10.0-alpine'
+              image nodeImage
               args '-u root'
             }
           }
@@ -160,7 +163,7 @@ pipeline {
         stage ('Test: ml') {
           agent {
             docker {
-              image 'python:3.6.4-alpine'
+              image pythonImage
               args '-u root'
             }
           }
