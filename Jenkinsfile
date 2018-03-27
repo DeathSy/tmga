@@ -137,6 +137,7 @@ pipeline {
             dir ('client') {
               sh 'npm install'
               sh 'npm run test:coverage'
+              junit 'coverage/junit.xml'
             }
           }
         }

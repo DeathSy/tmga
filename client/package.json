@@ -41,8 +41,11 @@
   "scripts": {
     "build": "next build",
     "start": "node server.js",
-    "test:coverage": "jest --testResultsProcessor jest-junit --coverage",
+    "test:coverage": "jest",
     "test:lint": "eslint components/*/**.js ducks/*/**.js pages/*/**.js",
     "test:watch": "jest --watch"
+  },
+  "jest-junit": {
+    "output": "./coverage/junit.xml"
   }
 }

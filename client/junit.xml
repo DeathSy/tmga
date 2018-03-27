@@ -1,6 +1,0 @@
-<testsuites name="jest tests" tests="1" failures="0" time="2.037">
-  <testsuite name="Test Root Component" errors="0" failures="0" skipped="0" timestamp="2018-03-26T15:55:57" time="2.037" tests="1">
-    <testcase classname="Test Root Component should render Home component" name="Test Root Component should render Home component" time="0.043">
-    </testcase>
-  </testsuite>
-</testsuites>
