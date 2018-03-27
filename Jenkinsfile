@@ -193,7 +193,7 @@ pipeline {
         stage ('Build: ml-image') {
           agent any
           steps {
-            sh 'make install-python sesrvice=ml'
+            sh 'make install-python service=ml'
           }
         }
 
