@@ -1,5 +1,15 @@
 #!groovy​
 
+def installNode () {
+  sh 'node -v'
+  sh 'npm install'
+}
+
+def installPython () {
+  sh 'python --version'
+  sh 'pip install -r requirements.txt'
+}
+
 pipeline {
   agent any
 
@@ -15,8 +25,7 @@ pipeline {
           }
           steps {
             dir ('api') {
-              sh 'node -v'
-              sh 'npm install'
+              installNode()
             }
           }
         }
@@ -30,8 +39,7 @@ pipeline {
           }
           steps {
             dir ('client') {
-              sh 'node -v'
-              sh 'npm install'
+              installNode()
             }
           }
         }
@@ -45,8 +53,7 @@ pipeline {
           }
           steps {
             dir ('ml') {
-              sh 'python --version'
-              sh 'pip install -r requirements.txt'
+              installPython()
             }
           }
         }
@@ -65,7 +72,7 @@ pipeline {
           }
           steps {
             dir ('api') {
-              sh 'npm install'
+              installNode()
               sh 'npm run test:lint'
             }
           }
@@ -80,7 +87,7 @@ pipeline {
           }
           steps {
             dir ('client') {
-              sh 'npm install'
+              installNode()
               sh 'npm run test:lint'
             }
           }
@@ -95,7 +102,7 @@ pipeline {
           }
           steps {
             dir ('ml') {
-              sh 'pip install -r requirements.txt'
+              installPython()
               sh 'pylint api/models.py api/serializers.py api/urls.py'
             }
           }
