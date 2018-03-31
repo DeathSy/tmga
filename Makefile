@@ -1,4 +1,4 @@
-REPOSITORY := deathsy
+REPOSITORY := dscythe
 TAG := $$(git log -1 --pretty=%h)
 
 db-image:
