@@ -179,21 +179,27 @@ pipeline {
         stage ('Build: client-image') {
           agent any
           steps {
-            sh 'make build-node service=client'
+            withCredentials([credentialsId: 'dockerHub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASSWORD']) {
+              sh "make build-node service=client username=$DOCKER_USER password=$DOCKER_PASSWORD"
+            }
           }
         }
 
         stage ('Build: api-image') {
           agent any
           steps {
-            sh 'make build-node service=api'
+            withCredentials([credentialsId: 'dockerHub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASSWORD']) {
+              sh "make build-node service=api username=$DOCKER_USER password=$DOCKER_PASSWORD"
+            }
           }
         }
         
         stage ('Build: ml-image') {
           agent any
           steps {
-            sh 'make build-python service=ml'
+            withCredentials([credentialsId: 'dockerHub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASSWORD']) {
+              sh "make build-python service=ml username=$DOCKER_USER password=$DOCKER_PASSWORD"
+            }
           }
         }
 
