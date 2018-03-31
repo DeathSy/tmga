@@ -206,5 +206,12 @@ pipeline {
       }
     }
 
+    stage ('Deploy: Develop') {
+      agent any
+      steps {
+        sh 'make deploy'
+      }
+    }
+
   }
 }
