@@ -109,15 +109,15 @@ export default class CreateModal extends Component {
                 style={{ verticalAlign: 'middle', padding: '10px 50px' }}
               />
 
-                        </Accordion.Content>
-                    </Accordion>
-                </Modal.Content>
-                <Modal.Actions>
-                <Button primary style={{ 'float': 'right', 'margin': '20px 0px' }}>
-                Create a timetable
-                </Button>
-                </Modal.Actions>
-            </Modal>
-        )
-    }
+            </Accordion.Content>
+          </Accordion>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button primary style={{ 'float': 'right', 'margin': '20px 0px' }}>
+            Create a timetable
+          </Button>
+        </Modal.Actions>
+      </Modal>
+    )
+  }
 }
