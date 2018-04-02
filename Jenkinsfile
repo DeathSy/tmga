@@ -209,7 +209,7 @@ pipeline {
     stage ('Deploy: Develop') {
       agent any
       steps {
-        sh 'make deploy'
+        echo 'Hello World'
       }
     }
 

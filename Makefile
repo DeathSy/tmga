@@ -21,6 +21,3 @@ build-python:
 	docker tag ${REPOSITORY}/tmga-$(service) ${REPOSITORY}/tmga-$(service):latest
 	docker login -u $(username) -p $(password)
 	docker push ${REPOSITORY}/tmga-$(service)
-
-deploy:
-	curl -v -X POST http://13.229.104.191:2375/images/create?fromImage=dscythe/tmga-api&tag=latest
