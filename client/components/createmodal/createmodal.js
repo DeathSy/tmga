@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import {
-  Button,
   Modal,
-  Checkbox,
   Dropdown,
   Accordion,
-  Icon,
-  Input
+  Icon
 } from 'semantic-ui-react'
+
+import { CreateTimeTableButton, StyledInput, SubjectCheckbox, TeacherCheckbox } from './styles'
 
 export default class CreateModal extends Component {
   state = { activeIndex: -1 } //eslint-disable-line
@@ -31,18 +30,17 @@ export default class CreateModal extends Component {
     return (
       <Modal
         trigger={
-          <Button primary style={{ float: 'right', marginRight: '62px' }}>
+          <CreateTimeTableButton primary>
             Create a timetable
-          </Button>
+          </CreateTimeTableButton>
         }
         size='small'
         closeIcon
       >
         <Modal.Header scrolling>Create a timetable</Modal.Header>
-        <Input
+        <StyledInput
           size='mini'
           placeholder='Search...'
-          style={{ float: 'right', margin: '12px 20px' }}
           icon={{ name: 'search', link: true }}
         />
         <Modal.Content>
@@ -63,24 +61,21 @@ export default class CreateModal extends Component {
               index={0}
               onClick={this.handleClick}
             >
-              <Checkbox
+              <SubjectCheckbox
                 onclick={this.handleClick}
                 label={<label>INT101 IT Fundamental</label>}
-                style={{ verticalAlign: 'middle', padding: '10px 16px' }}
               />
               <Icon name='dropdown' float='right' />
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 0}>
-              <Checkbox
+              <TeacherCheckbox
                 onclick={this.handleClick}
                 label={<label>Aj.Kittiphan</label>}
-                style={{ verticalAlign: 'middle', padding: '10px 50px' }}
               />
               <br />
-              <Checkbox
+              <TeacherCheckbox
                 onclick={this.handleClick}
                 label={<label>Aj.Ekapong</label>}
-                style={{ verticalAlign: 'middle', padding: '10px 50px' }}
               />
             </Accordion.Content>
 
@@ -89,33 +84,30 @@ export default class CreateModal extends Component {
               index={1}
               onClick={this.handleClick}
             >
-              <Checkbox
+              <SubjectCheckbox
                 onclick={this.handleClick}
                 label={<label>INT102 Computer Programming I</label>}
-                style={{ verticalAlign: 'middle', padding: '10px 16px' }}
               />
               <Icon name='dropdown' float='right' />
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 1}>
-              <Checkbox
+              <TeacherCheckbox
                 onclick={this.handleClick}
                 label={<label>Aj.Umaporn </label>}
-                style={{ verticalAlign: 'middle', padding: '10px 50px' }}
               />
               <br />
-              <Checkbox
+              <TeacherCheckbox
                 onclick={this.handleClick}
                 label={<label>Aj.Praisan</label>}
-                style={{ verticalAlign: 'middle', padding: '10px 50px' }}
               />
 
             </Accordion.Content>
           </Accordion>
         </Modal.Content>
         <Modal.Actions>
-          <Button primary style={{ 'float': 'right', 'margin': '20px 0px' }}>
+          <CreateTimeTableButton primary>
             Create a timetable
-          </Button>
+          </CreateTimeTableButton>
         </Modal.Actions>
       </Modal>
     )
