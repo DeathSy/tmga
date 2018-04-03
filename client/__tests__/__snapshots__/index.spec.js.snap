@@ -3,48 +3,55 @@
 exports[`Test Root Component should render Home component 1`] = `
 <div>
   <div>
-    <div>
+    <div
+      className="ui blue inverted vertical ui left small visible sidebar menu"
+    >
       <div
-        className="ui blue inverted vertical ui left wide visible sidebar menu"
+        className="item"
+        onClick={[Function]}
       >
-        <div
-          className="item"
-          onClick={[Function]}
-        >
-          <i
-            aria-hidden="true"
-            className="icon"
-          />
-        </div>
-        <a
-          className="active item"
-          onClick={[Function]}
-        >
-          Home
-        </a>
-        <a
-          className="item"
-          onClick={[Function]}
-        >
-          Timetable Editor
-        </a>
-        <a
-          className="item"
-          onClick={[Function]}
-        >
-          Data Management
-        </a>
-        <a
-          className="item"
-          onClick={[Function]}
-        >
-          Condition Management
-        </a>
+        <i
+          aria-hidden="true"
+          className="icon"
+        />
       </div>
+      <a
+        className="active item"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+      <a
+        className="item"
+        onClick={[Function]}
+      >
+        Timetable Editor
+      </a>
+      <a
+        className="item"
+        onClick={[Function]}
+      >
+        Data Management
+      </a>
+      <a
+        className="item"
+        onClick={[Function]}
+      >
+        Condition Management
+      </a>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": "20px 250px",
+          "width": "750px",
+        }
+      }
+    >
       <h1
         style={
           Object {
-            "textAlign": "center",
+            "padding": "24px",
           }
         }
       >
@@ -54,9 +61,7 @@ exports[`Test Root Component should render Home component 1`] = `
         className="ui fixed very basic table"
         style={
           Object {
-            "margin": "50px",
             "overflow": "scroll",
-            "width": "750px",
           }
         }
       >
@@ -117,10 +122,10 @@ exports[`Test Root Component should render Home component 1`] = `
                 }
               }
             >
-               
               <i
                 aria-hidden="true"
                 className="green checkmark big icon"
+                textAlign="center"
               />
             </td>
           </tr>
@@ -145,7 +150,6 @@ exports[`Test Root Component should render Home component 1`] = `
                 }
               }
             >
-               
               <i
                 aria-hidden="true"
                 className="red refresh big loading icon"
@@ -154,26 +158,26 @@ exports[`Test Root Component should render Home component 1`] = `
           </tr>
         </tbody>
       </table>
-      <button
-        className="ui primary button"
-        disabled={undefined}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        role="button"
-        style={
-          Object {
-            "float": "right",
-            "marginRight": "62px",
-          }
-        }
-        tabIndex={undefined}
-      >
-        Create a timetable
-      </button>
     </div>
+    <button
+      className="ui primary button"
+      disabled={undefined}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="button"
+      style={
+        Object {
+          "float": "right",
+          "margin": "20px 100px",
+        }
+      }
+      tabIndex={undefined}
+    >
+      Create a timetable
+    </button>
   </div>
 </div>
 `;
