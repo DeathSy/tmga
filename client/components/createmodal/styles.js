@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import { Button, Input, Checkbox } from 'semantic-ui-react'
 
 export const CreateTimeTableButton = styled(Button)`
-  float: right;
-  margin: 20px 20px;
+  float: 'right';
+  margin: 50px 80px;
 `
 
 export const StyledInput = styled(Input)`

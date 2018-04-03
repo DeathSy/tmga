@@ -3,7 +3,8 @@ import {
   Modal,
   Dropdown,
   Accordion,
-  Icon
+  Icon,
+  Button
 } from 'semantic-ui-react'
 
 import { CreateTimeTableButton, StyledInput, SubjectCheckbox, TeacherCheckbox } from './styles'
@@ -29,12 +30,12 @@ export default class CreateModal extends Component {
     return (
       <Modal
         trigger={
-          <CreateTimeTableButton primary>
+          <Button primary style={{float: 'right', margin: '50px 80px'}}>
             Create a timetable
-          </CreateTimeTableButton>
+          </Button>
         }
         size='small'
-        closeIcon>
+        closeIcon >
         <Modal.Header scrolling>Create a timetable</Modal.Header>
         <StyledInput
           size='mini'
