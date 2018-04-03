@@ -2,7 +2,7 @@ import React from 'react'
 import { Table, Icon } from 'semantic-ui-react'
 
 const TimetableList = () => (
-  <div style={{ width: '750px', margin: '20px 250px' }}>
+  <div style={{ width: '750px', margin: '20px 300px' }}>
     <h1 style={{ padding: '24px' }}>Timetable Scheduling Processes</h1>
     <Table
       basic='very'
