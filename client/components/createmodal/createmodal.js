@@ -35,15 +35,13 @@ export default class CreateModal extends Component {
           </Button>
         }
         size='small'
-        closeIcon
-      >
+        closeIcon>
         <Modal.Header scrolling>Create a timetable</Modal.Header>
         <Input
           size='mini'
           placeholder='Search...'
           style={{ float: 'right', margin: '12px 20px' }}
-          icon={{ name: 'search', link: true }}
-        />
+          icon={{ name: 'search', link: true }} />
         <Modal.Content>
           <p>
             Semester:
@@ -51,61 +49,48 @@ export default class CreateModal extends Component {
               inline
               defaultValue={options[0].value}
               options={options}
-              style={{ width: 'auto' }}
-            />
+              style={{ width: 'auto' }} />
           </p>
           <Accordion styled style={{ width: 'auto' }}>
             <Accordion.Title
               active={activeIndex === 0}
               index={0}
-              onClick={this.handleClick}
-            >
+              onClick={this.handleClick}>
               <Checkbox
                 onclick={this.handleClick}
                 label={<label>INT101 IT Fundamental</label>}
-                style={{ verticalAlign: 'middle', padding: '10px 16px' }}
-              />
+                style={{ verticalAlign: 'middle', padding: '10px 16px' }} />
               <Icon name='dropdown' float='right' />
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 0}>
               <Checkbox
                 onclick={this.handleClick}
                 label={<label>Aj.Kittiphan</label>}
-                style={{ verticalAlign: 'middle', padding: '10px 50px' }}
-              />
-              <br />
+                style={{ verticalAlign: 'middle', padding: '10px 50px' }} />
               <Checkbox
                 onclick={this.handleClick}
                 label={<label>Aj.Ekapong</label>}
-                style={{ verticalAlign: 'middle', padding: '10px 50px' }}
-              />
+                style={{ verticalAlign: 'middle', padding: '10px 50px' }} />
             </Accordion.Content>
-
             <Accordion.Title
               active={activeIndex === 1}
               index={1}
-              onClick={this.handleClick}
-            >
+              onClick={this.handleClick}>
               <Checkbox
                 onclick={this.handleClick}
                 label={<label>INT102 Computer Programming I</label>}
-                style={{ verticalAlign: 'middle', padding: '10px 16px' }}
-              />
+                style={{ verticalAlign: 'middle', padding: '10px 16px' }} />
               <Icon name='dropdown' float='right' />
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 1}>
               <Checkbox
                 onclick={this.handleClick}
                 label={<label>Aj.Umaporn </label>}
-                style={{ verticalAlign: 'middle', padding: '10px 50px' }}
-              />
-              <br />
+                style={{ verticalAlign: 'middle', padding: '10px 50px' }} />
               <Checkbox
                 onclick={this.handleClick}
                 label={<label>Aj.Praisan</label>}
-                style={{ verticalAlign: 'middle', padding: '10px 50px' }}
-              />
-
+                style={{ verticalAlign: 'middle', padding: '10px 50px' }} />
             </Accordion.Content>
           </Accordion>
         </Modal.Content>
