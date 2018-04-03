@@ -31,7 +31,7 @@ export default class CreateModal extends Component {
     return (
       <Modal
         trigger={
-          <Button primary style={{ float: 'right', marginRight: '62px' }}>
+          <Button primary style={{ float: 'right', margin: '20px 100px' }}>
             Create a timetable
           </Button>
         }
@@ -47,9 +47,7 @@ export default class CreateModal extends Component {
         />
         <Modal.Content>
           <p>
-            {' '}
             Semester:
-            {' '}
             <Dropdown
               inline
               defaultValue={options[0].value}
@@ -109,15 +107,15 @@ export default class CreateModal extends Component {
                 style={{ verticalAlign: 'middle', padding: '10px 50px' }}
               />
 
-                        </Accordion.Content>
-                    </Accordion>
-                </Modal.Content>
-                <Modal.Actions>
-                <Button primary style={{ 'float': 'right', 'margin': '20px 0px' }}>
-                Create a timetable
-                </Button>
-                </Modal.Actions>
-            </Modal>
-        )
-    }
+            </Accordion.Content>
+          </Accordion>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button primary style={{ 'float': 'right', 'margin': '20px 0px' }}>
+            Create a timetable
+          </Button>
+        </Modal.Actions>
+      </Modal>
+    )
+  }
 }
