@@ -1,17 +1,20 @@
 import React from 'react'
-
+import Sidebar from '../components/sidebar'
+import Timetable from '../components/timetable'
+import CreateModal from '../components/createmodal'
 import withLayout from '../lib/withLayout'
-import Home from '../components/home'
 
 export class Index extends React.Component {
-  static async getInitialProps (ctx) {
+  static async getInitialProps(ctx) {
     return {}
   }
 
-  render () {
+  render() {
     return (
       <div>
-        <Home />
+        <Sidebar/>
+        <Timetable/>
+        <CreateModal/>
       </div>
     )
   }
