@@ -44,16 +44,13 @@ exports[`Test Root Component should render Home component 1`] = `
       style={
         Object {
           "margin": "20px 300px",
-          "width": "750px",
+          "paddingTop": "30px",
+          "width": "780px",
         }
       }
     >
       <h1
-        style={
-          Object {
-            "padding": "24px",
-          }
-        }
+        className="ui header sc-bdVaJa bbacql"
       >
         Timetable Scheduling Processes
       </h1>
@@ -66,33 +63,18 @@ exports[`Test Root Component should render Home component 1`] = `
         }
       >
         <thead
-          className=""
-          style={
-            Object {
-              "font-size": "20px",
-            }
-          }
+          className="sc-bwzfXH kabNnl"
         >
           <tr
             className=""
           >
             <th
-              className="twelve wide"
-              style={
-                Object {
-                  "padding-left": "20px",
-                }
-              }
+              className="twelve wide sc-htpNat kpOWAC"
             >
               Semester
             </th>
             <th
-              className=""
-              style={
-                Object {
-                  "padding-left": "20px",
-                }
-              }
+              className="sc-htpNat kpOWAC"
             >
               Status
             </th>
@@ -105,22 +87,12 @@ exports[`Test Root Component should render Home component 1`] = `
             className=""
           >
             <td
-              className=""
-              style={
-                Object {
-                  "padding-left": "25px",
-                }
-              }
+              className="sc-bxivhb jpuhWO"
             >
               2/2560
             </td>
             <td
-              className=""
-              style={
-                Object {
-                  "padding-left": "25px",
-                }
-              }
+              className="sc-bxivhb jpuhWO"
             >
               <i
                 aria-hidden="true"
@@ -133,22 +105,12 @@ exports[`Test Root Component should render Home component 1`] = `
             className=""
           >
             <td
-              className=""
-              style={
-                Object {
-                  "padding-left": "25px",
-                }
-              }
+              className="sc-bxivhb jpuhWO"
             >
               2/2561
             </td>
             <td
-              className=""
-              style={
-                Object {
-                  "padding-left": "25px",
-                }
-              }
+              className="sc-bxivhb jpuhWO"
             >
               <i
                 aria-hidden="true"
@@ -171,7 +133,7 @@ exports[`Test Root Component should render Home component 1`] = `
       style={
         Object {
           "float": "right",
-          "margin": "20px 100px",
+          "margin": "50px 80px",
         }
       }
       tabIndex={undefined}
