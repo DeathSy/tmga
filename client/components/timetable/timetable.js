@@ -1,36 +1,37 @@
 import React from 'react'
 import { Table, Icon } from 'semantic-ui-react'
+import { Topic, TableHead, TableHeadCell, TableCellStyle } from './styles'
 
 const TimetableList = () => (
-  <div style={{ width: '750px', margin: '20px 300px' }}>
-    <h1 style={{ padding: '24px' }}>Timetable Scheduling Processes</h1>
+  <div style={{ width: '780px', margin: '20px 300px', paddingTop: '30px' }}>
+    <Topic as='h1'>Timetable Scheduling Processes</Topic>
     <Table
       basic='very'
       fixed
       style={{ overflow: 'scroll' }}
     >
-      <Table.Header style={{ 'font-size': '20px' }}>
+      <TableHead>
         <Table.Row>
-          <Table.HeaderCell width={12} style={{ 'padding-left': '20px' }}>
+          <TableHeadCell width={12} >
             Semester
-          </Table.HeaderCell>
-          <Table.HeaderCell style={{ 'padding-left': '20px' }}>
+          </TableHeadCell>
+          <TableHeadCell>
             Status
-          </Table.HeaderCell>
+          </TableHeadCell>
         </Table.Row>
-      </Table.Header>
+      </TableHead>
       <Table.Body>
         <Table.Row>
-          <Table.Cell style={{ 'padding-left': '25px' }}>2/2560</Table.Cell>
-          <Table.Cell style={{ 'padding-left': '25px' }}>
+          <TableCellStyle>2/2560</TableCellStyle>
+          <TableCellStyle>
             <Icon size='big' color='green' name='checkmark' textAlign='center' />
-          </Table.Cell>
+          </TableCellStyle>
         </Table.Row>
         <Table.Row>
-          <Table.Cell style={{ 'padding-left': '25px' }}>2/2561</Table.Cell>
-          <Table.Cell style={{ 'padding-left': '25px' }}>
+          <TableCellStyle>2/2561</TableCellStyle>
+          <TableCellStyle>
             <Icon loading size='big' color='red' name='refresh' />
-          </Table.Cell>
+          </TableCellStyle>
         </Table.Row>
       </Table.Body>
     </Table>
