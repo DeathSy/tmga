@@ -1,4 +1,4 @@
-REPOSITORY := deathsy
+REPOSITORY := dscythe
 TAG := $$(git log -1 --pretty=%h)
 
 db-image:
@@ -13,7 +13,11 @@ build-node:
 	docker container run --rm -v $(shell pwd)/$(service):/app node_build build
 	docker image build -t ${REPOSITORY}/tmga-$(service) ./$(service)
 	docker tag ${REPOSITORY}/tmga-$(service) ${REPOSITORY}/tmga-$(service):latest
+	docker login -u $(username) -p $(password)
+	docker push ${REPOSITORY}/tmga-$(service)
 
 build-python:	
 	docker image build -t ${REPOSITORY}/tmga-$(service) ./$(service)
 	docker tag ${REPOSITORY}/tmga-$(service) ${REPOSITORY}/tmga-$(service):latest
+	docker login -u $(username) -p $(password)
+	docker push ${REPOSITORY}/tmga-$(service)

@@ -179,24 +179,37 @@ pipeline {
         stage ('Build: client-image') {
           agent any
           steps {
-            sh 'make build-node service=client'
+            withCredentials([[ $class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerHub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASSWORD' ]]) {
+              sh "make build-node service=client username=$DOCKER_USER password=$DOCKER_PASSWORD"
+            }
           }
         }
 
         stage ('Build: api-image') {
           agent any
           steps {
-            sh 'make build-node service=api'
+            withCredentials([[ $class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerHub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASSWORD' ]]) {
+              sh "make build-node service=api username=$DOCKER_USER password=$DOCKER_PASSWORD"
+            }
           }
         }
         
         stage ('Build: ml-image') {
           agent any
           steps {
-            sh 'make build-python service=ml'
+            withCredentials([[ $class: 'UsernamePasswordMultiBinding', credentialsId: 'dockerHub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASSWORD' ]]) {
+              sh "make build-python service=ml username=$DOCKER_USER password=$DOCKER_PASSWORD"
+            }
           }
         }
 
+      }
+    }
+
+    stage ('Deploy: Develop') {
+      agent any
+      steps {
+        echo 'Hello World'
       }
     }
 
