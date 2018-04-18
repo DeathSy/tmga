@@ -4,7 +4,12 @@ exports[`Test Root Component should render Home component 1`] = `
 <div>
   <div>
     <div
-      className="ui blue inverted vertical ui left 180px visible sidebar menu"
+      className="ui blue inverted vertical ui left visible sidebar menu"
+      style={
+        Object {
+          "width": "180px",
+        }
+      }
     >
       <div
         className="item"
