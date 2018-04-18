@@ -1,6 +1,6 @@
 import React from 'react'
 import { Segment, Header, Image, Modal } from 'semantic-ui-react'
-import { Topic, TableHead, TableHeadCell, TableCellStyle } from './styles'
+import { Topic } from './styles'
 
 const LecturerModal = () => (
   <div style={{ width: '800px', margin: '20px 300px', paddingTop: '30px', position: 'absolute' }}>

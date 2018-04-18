@@ -10,18 +10,16 @@ const mapStateToProps = state => ({})
 
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch, dispatch)
 class Management extends Component {
-
   render () {
 
     return (
       <div>
         <Lecturer />
         <Rooms />
-        <Subjects />        
+        <Subjects />
       </div>
     )
   }
-
 }
 
 export default compose(

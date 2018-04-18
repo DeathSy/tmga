@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { Sidebar, Menu, Icon, Dropdown } from 'semantic-ui-react'
+import { Sidebar, Menu, Icon } from 'semantic-ui-react'
 
 export default class SidebarMenu extends Component {
   state = { activeItem: 'Home' } // eslint-disable-line
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
-  render() {
+  render () {
     const { activeItem } = this.state
 
     return (
@@ -24,7 +24,7 @@ export default class SidebarMenu extends Component {
           active={activeItem === 'Timetable Editor'}
           onClick={this.handleItemClick}
         />
-        <Menu.Item>         
+        <Menu.Item>
           Data Management
           <Menu.Menu>
             <Menu.Item name='Lecturers' active={activeItem === 'Lecturers'} onClick={this.handleItemClick} />

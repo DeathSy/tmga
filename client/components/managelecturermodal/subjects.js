@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Card, Segment, Header, Image, Modal } from 'semantic-ui-react'
+import { Card, Segment, Modal } from 'semantic-ui-react'
 
 class NestedModal extends Component {
   state = { open: false }
