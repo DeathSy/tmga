@@ -4,7 +4,12 @@ exports[`Test Root Component should render Home component 1`] = `
 <div>
   <div>
     <div
-      className="ui blue inverted vertical ui left 180px visible sidebar menu"
+      className="ui blue inverted vertical ui left visible sidebar menu"
+      style={
+        Object {
+          "width": "180px",
+        }
+      }
     >
       <div
         className="item"
@@ -27,12 +32,34 @@ exports[`Test Root Component should render Home component 1`] = `
       >
         Timetable Editor
       </a>
-      <a
+      <div
         className="item"
         onClick={[Function]}
       >
         Data Management
-      </a>
+        <div
+          className="menu"
+        >
+          <a
+            className="item"
+            onClick={[Function]}
+          >
+            Lecturers
+          </a>
+          <a
+            className="item"
+            onClick={[Function]}
+          >
+            Rooms
+          </a>
+          <a
+            className="item"
+            onClick={[Function]}
+          >
+            Subjects
+          </a>
+        </div>
+      </div>
       <a
         className="item"
         onClick={[Function]}
