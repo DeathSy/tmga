@@ -27,12 +27,34 @@ exports[`Test Root Component should render Home component 1`] = `
       >
         Timetable Editor
       </a>
-      <a
+      <div
         className="item"
         onClick={[Function]}
       >
         Data Management
-      </a>
+        <div
+          className="menu"
+        >
+          <a
+            className="item"
+            onClick={[Function]}
+          >
+            Lecturers
+          </a>
+          <a
+            className="item"
+            onClick={[Function]}
+          >
+            Rooms
+          </a>
+          <a
+            className="item"
+            onClick={[Function]}
+          >
+            Subjects
+          </a>
+        </div>
+      </div>
       <a
         className="item"
         onClick={[Function]}
