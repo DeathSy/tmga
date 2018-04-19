@@ -12,7 +12,11 @@ export const subjectSchema = mongoose.Schema({
   type: {
     tpye: String,
     required: true
-  }
+  },
+  prerequisite: [{
+    type: mongoose.Types.ObjectId,
+    ref: 'Subjects'
+  }]
 })
 
 export default mongoose.model('Subjects', subjectSchema)
