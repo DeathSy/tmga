@@ -1,0 +1,9 @@
+{
+  "name": "tmga-ml",
+  "version": "1.0.0",
+  "description": "genetic algorithm for tmga application",
+  "main": "index.js",
+  "author": "deathsy",
+  "license": "MIT",
+  "private": false
+}
