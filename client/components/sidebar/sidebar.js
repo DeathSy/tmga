@@ -6,7 +6,7 @@ export default class SidebarMenu extends Component {
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
-  render() {
+  render () {
     const { activeItem } = this.state
 
     return (
