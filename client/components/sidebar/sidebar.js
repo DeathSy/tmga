@@ -6,11 +6,11 @@ export default class SidebarMenu extends Component {
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
-  render () {
+  render() {
     const { activeItem } = this.state
 
     return (
-      <Sidebar as={Menu} visible vertical inverted color='blue' style={{ width: '180px' }} >
+      <Sidebar as={Menu} visible vertical inverted color='blue' style={{ width: '240px' }} >
         <Menu.Item name='Logo'>
           <Icon />
         </Menu.Item>
@@ -24,14 +24,16 @@ export default class SidebarMenu extends Component {
           active={activeItem === 'Timetable Editor'}
           onClick={this.handleItemClick}
         />
-        <Menu.Item>
-          Data Management
-          <Menu.Menu>
-            <Menu.Item name='Lecturers' active={activeItem === 'Lecturers'} onClick={this.handleItemClick} />
-            <Menu.Item name='Rooms' active={activeItem === 'Rooms'} onClick={this.handleItemClick} />
-            <Menu.Item name='Subjects' active={activeItem === 'Subjects'} onClick={this.handleItemClick} />
-          </Menu.Menu>
-        </Menu.Item>
+        <Menu.Item
+          name='Data Management'
+          active={activeItem === 'Data Management'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Menu>
+          <Menu.Item name='Lecturers' active={activeItem === 'Lecturers'} onClick={this.handleItemClick} />
+          <Menu.Item name='Rooms' active={activeItem === 'Rooms'} onClick={this.handleItemClick} />
+          <Menu.Item name='Subjects' active={activeItem === 'Subjects'} onClick={this.handleItemClick} />
+        </Menu.Menu>
         <Menu.Item
           name='Condition Management'
           active={activeItem === 'Condition Management'}
