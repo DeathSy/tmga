@@ -10,9 +10,9 @@ export const TableHead = styled(TableHeader)`
 `
 
 export const TableHeadCell = styled(TableHeaderCell)`
-  padding-left: 20px;
+  padding-left: 40px;
 `
 
 export const TableCellStyle = styled(TableCell)`
-  padding-left: 25px;
+  padding-left: 100px;
 `
