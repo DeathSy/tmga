@@ -10,7 +10,7 @@ export default class SidebarMenu extends Component {
     const { activeItem } = this.state
 
     return (
-      <Sidebar as={Menu} visible vertical inverted color='blue' style={{ width: '240px' }} >
+      <Sidebar as={Menu} visible vertical inverted color='blue' style={{ width: '300px' }} >
         <Menu.Item name='Logo'>
           <Icon />
         </Menu.Item>

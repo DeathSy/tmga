@@ -3,6 +3,7 @@ import { TableCell, TableHeader, TableHeaderCell, Header } from 'semantic-ui-rea
 
 export const Topic = styled(Header)`
   margin: 500px;
+  position: relative;
 `
 
 export const TableHead = styled(TableHeader)`
@@ -10,9 +11,9 @@ export const TableHead = styled(TableHeader)`
 `
 
 export const TableHeadCell = styled(TableHeaderCell)`
-  padding-left: 40px;
+  padding-left: 20px;
 `
 
 export const TableCellStyle = styled(TableCell)`
-  padding-left: 100px;
+  padding-left: 25px;
 `

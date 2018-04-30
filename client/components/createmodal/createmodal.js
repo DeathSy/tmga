@@ -34,7 +34,7 @@ export default class CreateModal extends Component {
             Create a timetable
           </Button>
         }
-        size='small'
+        size='medium'
         closeIcon >
         <Modal.Header scrolling>Create a timetable</Modal.Header>
         <StyledInput
