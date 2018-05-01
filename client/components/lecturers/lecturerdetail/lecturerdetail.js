@@ -6,19 +6,23 @@ const LecturerDetail = () => (
     <h1> <Icon name='left chevron' />Lecturers</h1>
     <h2 style={{ marginLeft: '35px' }}>Aj.Atchara TranUraikul</h2>
     <Grid size='large' divided='vertically'>
-      <Grid.Row columns={2}>
-        <Grid.Column>
-          <h3 style={{ margin: '30px 100px' }}>Name:Aj.Atchara TranUraikul </h3>
-          <h3 style={{ margin: '30px 100px' }}>Email:      atchara@sit.kmutt.ac.th</h3>
-          <h3 style={{ margin: '30px 100px' }}>Tel:      024709866</h3>
-          <h3 style={{ margin: '30px 100px' }}>Subject </h3>
-          <Card style={{ height: '200px', width: '340px', marginLeft: '100px' }} >
-            <Card.Content>
-              INT102
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-      </Grid.Row>
+      <Grid.Column width={4}>
+        <h3 style={{ margin: '30px 100px' }}>Name: </h3>
+        <h3 style={{ margin: '30px 100px' }}>Email:      </h3>
+        <h3 style={{ margin: '30px 100px' }}>Tel:      </h3>
+        <h3 style={{ margin: '30px 100px' }}>Subject </h3>
+       
+      </Grid.Column>
+      <Grid.Column floated='left' width={9}>
+        <h3 style={{marginTop: '30px'}}>Aj.Atchara TranUraikul</h3>
+        <h3 style={{marginTop: '30px'}}>atchara@sit.kmutt.ac.th</h3>
+        <h3 style={{marginTop: '30px'}}>024709866</h3>
+        <Card style={{ height: '200px', width: '340px' }} >
+          <Card.Content>
+            INT102
+          </Card.Content>
+        </Card>
+      </Grid.Column>
     </Grid>
     <Button primary size='large' floated='right' style={{ marginTop: '30px', marginRight: '90px' }}>
       Edit
