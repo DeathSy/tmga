@@ -21,7 +21,7 @@ class AddLecturers extends Component {
             <Form.Field inline control={Input} label='Subject:' placeholder='Subject Code' style={{ width: '200px' }} />
             <Icon name='plus' />
           </Form.Group>
-          <Button primary floated='right' size='large'>Edit</Button>
+          <Button primary floated='right' size='large'>Add</Button>
           <Button floated='right' size='large'>Cancel</Button>
         </Form>
       </div>

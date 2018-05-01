@@ -8,10 +8,9 @@ const LecturerDetail = () => (
     <Grid size='large' divided='vertically'>
       <Grid.Column width={4}>
         <h3 style={{ margin: '30px 100px' }}>Name: </h3>
-        <h3 style={{ margin: '30px 100px' }}>Email:      </h3>
-        <h3 style={{ margin: '30px 100px' }}>Tel:      </h3>
-        <h3 style={{ margin: '30px 100px' }}>Subject </h3>
-       
+        <h3 style={{ margin: '30px 100px' }}>Email:</h3>
+        <h3 style={{ margin: '30px 100px' }}>Tel:</h3>
+        <h3 style={{ margin: '30px 100px' }}>Subject:</h3>
       </Grid.Column>
       <Grid.Column floated='left' width={9}>
         <h3 style={{marginTop: '30px'}}>Aj.Atchara TranUraikul</h3>
