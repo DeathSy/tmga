@@ -26,7 +26,6 @@ export default class CreateModal extends Component {
       { key: 2, text: '2/2561', value: 2 },
       { key: 3, text: '1/2562', value: 3 }
     ]
-
     return (
       <Modal
         trigger={
@@ -95,7 +94,6 @@ export default class CreateModal extends Component {
                 onclick={this.handleClick}
                 label={<label>Aj.Praisan</label>}
               />
-
             </Accordion.Content>
           </Accordion>
         </Modal.Content>
