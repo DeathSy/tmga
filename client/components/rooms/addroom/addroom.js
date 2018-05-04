@@ -12,11 +12,8 @@ const buildings = [
 class AddRoom extends Component {
   state = {}
 
-  handleChange = (e, { value }) => this.setState({ value })
-
   render () {
 
-    const { value } = this.state
     return (
       <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
         <h1> <Icon name='left chevron' />Add New Room</h1>
@@ -27,17 +24,18 @@ class AddRoom extends Component {
             <h3 style={{margin: '40px 80px'}}>Quantity:</h3>
             <h3 style={{margin: '40px 80px'}}>Building:</h3>
           </Grid.Column>
-          <Grid.Column floated='left' width={9}>
+          <Grid.Column floated='left' width={11}>
             <Form size='large' style={{ width: '1000px', marginLeft: '30px', padding: '30px' }}>
               <Form.Field inline control={Input} placeholder='Room name' style={{ width: '400px' }}/>
               <Form.Field inline control={Select} options={type} placeholder='Room Type' />
               <Form.Field inline control={Input} placeholder='Quantity' style={{ width: '300px' }}/>
               <Form.Field inline control={Select} options={buildings} placeholder='Building' />
               <Button primary floated='right' size='large'>Add</Button>
-              <Button floated='right' size='large'>Cancel</Button>
-            </Form>
+              <Button floated='right' size='large'>Cancel</Button>            
+            </Form>           
           </Grid.Column>
         </Grid>
+        
       </div>
     )
   }
