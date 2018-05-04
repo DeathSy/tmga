@@ -4,11 +4,8 @@ import { Button, Checkbox, Form, Input, Icon } from 'semantic-ui-react'
 class AddLecturers extends Component {
   state = {}
 
-  handleChange = (e, { value }) => this.setState({ value })
-
   render () {
 
-    const { value } = this.state
     return (
       <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
         <h1> <Icon name='left chevron' />Edit - Aj.Atchara TranUraikul</h1>
