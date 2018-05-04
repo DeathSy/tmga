@@ -6,7 +6,7 @@ class AddLecturers extends Component {
 
   handleChange = (e, { value }) => this.setState({ value })
 
-  render() {
+  render () {
 
     const { value } = this.state
     return (
