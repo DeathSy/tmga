@@ -1,13 +1,8 @@
 import { exec } from 'child-process-promise'
+import { generateTimeTable } from '../libs/genetic'
 
 export const startGenerateSchedual = (req, res) => {
-  exec('babel-node models/genetic.js')
-    .then(({ stdout }) => {
-      console.log(stdout)
-    })
-    .catch(({ stderr }) => {
-      console.log(stderr)
-    })
+    const data = generateTimeTable()
 
-  res.send({ message: 'Timetable is start generating' })
+  res.send(data)
 }
