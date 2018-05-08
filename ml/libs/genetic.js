@@ -73,16 +73,17 @@ const initIndividuals = () => {
     for (let i = 0; i < 2; i++) {
         sections.map(section => {
             const randNum = Math.floor((Math.random() * 3) + 4)
-            while (true) {
-                const index = Math.floor(Math.random() * timeArray.length)
-                let count = 0
-                while (count !== randNum) {
-                    timeArray[index + count] = section
-                    count++
-                }
-                result[i] = timeArray
-                break;
+            const index = Math.floor(Math.random() * timeArray.length)
+            let count = 0
+            while (count !== randNum) {
+              if (!Array.isArray(timeArray[index + count]) || timeArray[index + count].length === 0) {
+                timeArray[index + count] = [section]
+              } else {
+                timeArray[index + count] = [...timeArray[index + count], section]
+              }
+              count++
             }
+            result[i] = timeArray
         })
     }
 
