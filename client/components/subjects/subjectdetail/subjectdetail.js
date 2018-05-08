@@ -18,7 +18,7 @@ const SubjectDetail = () => (
         <h3 style={{ marginTop: '30px' }}>IT Fundamentals</h3>
         <h3 style={{ marginTop: '30px' }}>Lecture</h3>
         <h3 style={{ marginTop: '30px' }}>3 hours</h3>
-        <h3 style={{ marginTop: '30px' }}>3</h3>
+        <h3 style={{ marginTop: '30px' }}>CB2306</h3>
         <List bulleted relaxed style={{ marginTop: '30px' }}>
           <List.Item ><h3>Section1</h3>
             <List.List>
