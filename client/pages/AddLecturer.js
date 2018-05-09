@@ -1,9 +1,9 @@
 import React from 'react'
 import Sidebar from '../components/sidebar'
-import SubjectDetail from '../components/subjects/subjectdetail'
+import AddLecturer from '../components/lecturers/addlecturer'
 import withLayout from '../lib/withLayout'
 
-export class ViewSubject extends React.Component {
+export class NewLecturer extends React.Component {
   static async getInitialProps (ctx) {
     return {}
   }
@@ -12,10 +12,10 @@ export class ViewSubject extends React.Component {
     return (
       <div>
         <Sidebar />
-        <SubjectDetail />
+        <AddLecturer />
       </div>
     )
   }
 }
 
-export default withLayout(ViewSubject)
+export default withLayout(NewLecturer)

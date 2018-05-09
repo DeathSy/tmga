@@ -1,9 +1,9 @@
 import React from 'react'
 import Sidebar from '../components/sidebar'
-import SubjectDetail from '../components/subjects/subjectdetail'
+import EditRoom from '../components/rooms/editroom'
 import withLayout from '../lib/withLayout'
 
-export class ViewSubject extends React.Component {
+export class RoomEdit extends React.Component {
   static async getInitialProps (ctx) {
     return {}
   }
@@ -12,10 +12,10 @@ export class ViewSubject extends React.Component {
     return (
       <div>
         <Sidebar />
-        <SubjectDetail />
+        <EditRoom />
       </div>
     )
   }
 }
 
-export default withLayout(ViewSubject)
+export default withLayout(RoomEdit)

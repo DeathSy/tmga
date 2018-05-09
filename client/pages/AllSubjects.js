@@ -1,9 +1,9 @@
 import React from 'react'
 import Sidebar from '../components/sidebar'
-import SubjectDetail from '../components/subjects/subjectdetail'
+import Subjects from '../components/subjects'
 import withLayout from '../lib/withLayout'
 
-export class ViewSubject extends React.Component {
+export class AllSubjects extends React.Component {
   static async getInitialProps (ctx) {
     return {}
   }
@@ -12,10 +12,10 @@ export class ViewSubject extends React.Component {
     return (
       <div>
         <Sidebar />
-        <SubjectDetail />
+        <Subjects />
       </div>
     )
   }
 }
 
-export default withLayout(ViewSubject)
+export default withLayout(AllSubjects)

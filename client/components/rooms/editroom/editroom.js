@@ -26,7 +26,7 @@ class AddRoom extends Component {
           </Grid.Column>
           <Grid.Column floated='left' width={11}>
             <Form size='large' style={{ width: '1000px', marginLeft: '30px', padding: '30px' }}>
-              <Form.Field inline control={Input} placeholder='Room name' value={'CB2301'} readOnly style={{ width: '400px' }}/>
+              <Form.Field inline control={Input} placeholder='Room name' value={'CB2301'} readOnly =style={{ width: '400px' }}/>
               <Form.Field inline control={Select} options={type} placeholder='Room Type' />
               <Form.Field inline control={Input} placeholder='Quantity' style={{ width: '300px' }}/>
               <Form.Field inline control={Select} options={buildings} placeholder='Building' />
