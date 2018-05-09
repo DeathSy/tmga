@@ -5,16 +5,16 @@ import CreateModal from '../components/createmodal'
 import withLayout from '../lib/withLayout'
 
 export class Index extends React.Component {
-  static async getInitialProps(ctx) {
+  static async getInitialProps (ctx) {
     return {}
   }
 
-  render() {
+  render () {
     return (
       <div>
-        <Sidebar/>
-        <Timetable/>
-        <CreateModal/>
+        <Sidebar />
+        <Timetable />
+        <CreateModal />
       </div>
     )
   }
