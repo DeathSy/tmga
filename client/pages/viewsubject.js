@@ -4,15 +4,15 @@ import SubjectDetail from '../components/subjects/subjectdetail'
 import withLayout from '../lib/withLayout'
 
 export class ViewSubject extends React.Component {
-  static async getInitialProps(ctx) {
+  static async getInitialProps (ctx) {
     return {}
   }
 
-  render() {
+  render () {
     return (
       <div>
-        <Sidebar/>
-        <SubjectDetail/>
+        <Sidebar />
+        <SubjectDetail />
       </div>
     )
   }
