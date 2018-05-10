@@ -27,34 +27,70 @@ export default class CreateModal extends Component {
       { key: 3, text: '1/2562', value: 3 }
     ]
     return (
-      <Modal trigger={<Button primary style={{float: 'right', margin: '50px 80px'}}>Create a timetable</Button>} size='small' closeIcon >
+      <Modal
+        trigger={
+          <Button primary style={{ float: 'right', margin: '50px 80px' }}>Create a timetable</Button>
+        }
+        size='small'
+        closeIcon >
         <Modal.Header scrolling>Create a timetable</Modal.Header>
-        <StyledInput size='mini' placeholder='Search...' icon={{ name: 'search', link: true }} />
+        <StyledInput
+          size='mini'
+          placeholder='Search...'
+          icon={{ name: 'search', link: true }}
+        />
         <Modal.Content>
           <p>
             Semester:
-            <Dropdown inline defaultValue={options[0].value} options={options} style={{ width: 'auto' }} />
+            <Dropdown
+              inline
+              defaultValue={options[0].value}
+              options={options}
+              style={{ width: 'auto' }} />
           </p>
           <Accordion styled style={{ width: 'auto' }}>
-            <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>
-              <SubjectCheckbox onclick={this.handleClick} label={<label>INT101 IT Fundamental</label>} />
+            <Accordion.Title
+              active={activeIndex === 0}
+              index={0}
+              onClick={this.handleClick}
+            >
+              <SubjectCheckbox
+                onclick={this.handleClick}
+                label={<label>INT101 IT Fundamental</label>}
+              />
               <Icon name='dropdown' float='right' />
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 0}>
-              <TeacherCheckbox onclick={this.handleClick} label={<label>Aj.Kittiphan</label>} />
+              <TeacherCheckbox
+                onclick={this.handleClick}
+                label={<label>Aj.Kittiphan</label>}
+              />
               <br />
-              <TeacherCheckbox onclick={this.handleClick} label={<label>Aj.Ekapong</label>} />
+              <TeacherCheckbox
+                onclick={this.handleClick}
+                label={<label>Aj.Ekapong</label>}
+              />
             </Accordion.Content>
-            <Accordion.Title active={activeIndex === 1} index={1} onClick={this.handleClick}
+            <Accordion.Title
+              active={activeIndex === 1}
+              index={1}
+              onClick={this.handleClick}
             >
-              <SubjectCheckbox onclick={this.handleClick} label={<label>INT102 Computer Programming I</label>} />
+              <SubjectCheckbox
+                onclick={this.handleClick}
+                label={<label>INT102 Computer Programming I</label>}
+              />
               <Icon name='dropdown' float='right' />
             </Accordion.Title>
             <Accordion.Content active={activeIndex === 1}>
-              <TeacherCheckbox onclick={this.handleClick} label={<label>Aj.Umaporn </label>}
+              <TeacherCheckbox
+                onclick={this.handleClick}
+                label={<label>Aj.Umaporn </label>}
               />
               <br />
-              <TeacherCheckbox onclick={this.handleClick} label={<label>Aj.Praisan</label>}
+              <TeacherCheckbox
+                onclick={this.handleClick}
+                label={<label>Aj.Praisan</label>}
               />
             </Accordion.Content>
           </Accordion>
