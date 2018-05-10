@@ -1,18 +1,11 @@
 import React from 'react'
-import { Grid, Button, Icon, List, Form, Dropdown } from 'semantic-ui-react'
+import { Grid, Button, Icon, Form, Dropdown } from 'semantic-ui-react'
 
-export default class EditSubject extends React.Component {
-  state = {
-    subjectId: 'INT101',
-    subjectName: 'ITFundamentals',
-
-  }
-  render() {
-
+export default class AddSubject extends React.Component {
+  render () {
     const typeOptions = [
       { key: 'lecture', value: 'Lecture', text: 'Lecture' },
       { key: 'lab', value: 'Lab', text: 'Lab' }]
-    const type = 'Lecture'
     const timeOptions = [
       { key: '2', value: '2', text: '2 hours' },
       { key: '3', value: '3', text: '3 hours' }]
@@ -35,8 +28,12 @@ export default class EditSubject extends React.Component {
           </Grid.Column>
           <Grid.Column floated='left' width={4}>
             <Form style={{ marginTop: '25px' }}>
-              <h3 style={{ marginTop: '30px' }}> {this.state.subjectId}</h3>
-              <h3 style={{ marginTop: '30px', marginBottom: '25px' }}> {this.state.subjectName}</h3>
+              <Form.Field>
+                <input placeholder='Subject ID' />
+              </Form.Field>
+              <Form.Field>
+                <input placeholder='Subject Name' />
+              </Form.Field>
               <Form.Field>
                 <Dropdown placeholder='Type' selection options={typeOptions} defaultValue='Lecture' />
               </Form.Field>
@@ -47,7 +44,7 @@ export default class EditSubject extends React.Component {
                 <Dropdown placeholder='Room' search selection options={roomOptions} defaultValue='CB2306' />
               </Form.Field>
               <Form.Field>
-                <input placeholder='Amount' />
+                <input placeholder='Amount per a section' />
               </Form.Field>
               <Form.Field>
                 <Button floated='right'> <icon name='add' />Add Section</Button>
@@ -56,7 +53,7 @@ export default class EditSubject extends React.Component {
           </Grid.Column>
         </Grid>
         <Button primary size='large' floated='right' style={{ marginTop: '30px', marginRight: '90px' }}>
-          Add
+          Edit
           <Icon name='right chevron' />
         </Button>
         <Button size='large' floated='right' style={{ marginTop: '30px' }}>Delete</Button>

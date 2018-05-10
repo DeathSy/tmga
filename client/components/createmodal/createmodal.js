@@ -29,7 +29,7 @@ export default class CreateModal extends Component {
     return (
       <Modal
         trigger={
-          <Button primary style={{float: 'right', margin: '50px 80px'}}>Create a timetable</Button>
+          <Button primary style={{ float: 'right', margin: '50px 80px' }}>Create a timetable</Button>
         }
         size='small'
         closeIcon >
