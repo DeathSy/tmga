@@ -35,8 +35,8 @@ export default class EditSubject extends React.Component {
           </Grid.Column>
           <Grid.Column floated='left' width={4}>
             <Form style={{ marginTop: '25px' }}>
-              <h3 style={{ margin: '30px 0px' }}> {this.state.subjectId}</h3>
-              <h3 style={{ margin: '30px 0px' }}> {this.state.subjectName}</h3>
+              <h3 style={{ marginTop: '30px' }}> {this.state.subjectId}</h3>
+              <h3 style={{ marginTop: '30px', marginBottom: '25px' }}> {this.state.subjectName}</h3>
               <Form.Field>
                 <Dropdown placeholder='Type' selection options={typeOptions} defaultValue='Lecture' />
               </Form.Field>
@@ -47,10 +47,7 @@ export default class EditSubject extends React.Component {
                 <Dropdown placeholder='Room' search selection options={roomOptions} defaultValue='CB2306' />
               </Form.Field>
               <Form.Field>
-                <input placeholder='Start ID' />
-              </Form.Field>
-              <Form.Field>
-                <input placeholder='End ID' />
+                <input placeholder='Amount' />
               </Form.Field>
               <Form.Field>
                 <Button floated='right'> <icon name='add' />Add Section</Button>
@@ -59,7 +56,7 @@ export default class EditSubject extends React.Component {
           </Grid.Column>
         </Grid>
         <Button primary size='large' floated='right' style={{ marginTop: '30px', marginRight: '90px' }}>
-          Edit
+          Add
           <Icon name='right chevron' />
         </Button>
         <Button size='large' floated='right' style={{ marginTop: '30px' }}>Delete</Button>
