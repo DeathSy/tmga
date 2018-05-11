@@ -10,8 +10,11 @@
     "body-parser": "^1.18.2",
     "child-process-promise": "^2.2.1",
     "cors": "^2.8.4",
+    "eukaryote": "^2.0.1",
     "express": "^4.16.3",
     "genetic-js": "^0.1.14",
+    "geneticalgorithm": "^0.3.4",
+    "lodash": "^4.17.10",
     "mockingoose": "^2.9.1",
     "mongoose": "^5.0.16",
     "uuid": "^3.2.1"
