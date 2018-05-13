@@ -39,6 +39,10 @@ export default class SidebarMenu extends Component {
           active={activeItem === 'Condition Management'}
           onClick={this.handleItemClick}
         />
+        <Menu.Menu>
+          <Menu.Item name='Activity Day' active={activeItem === 'Activity Day'} onClick={this.handleItemClick} />
+          <Menu.Item name="Lecturer's Condition" active={activeItem === "Lecturer's Condition"} onClick={this.handleItemClick} />
+        </Menu.Menu>
 
       </Sidebar>
     )
