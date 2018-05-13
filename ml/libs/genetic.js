@@ -6,7 +6,7 @@ export const generateTimeTable = () => {
   const population = new Population(0.7, 250)
 
   // into ga loop
-  while (population.maxFitness < 0.8) {
+  while (population.maxFitness < 1) {
     population.calcFitness()
     population.naturalSelection()
     population.generate()
