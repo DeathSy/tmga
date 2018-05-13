@@ -66,6 +66,22 @@ exports[`Test Root Component should render Home component 1`] = `
       >
         Condition Management
       </a>
+      <div
+        className="menu"
+      >
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          Activity Day
+        </a>
+        <a
+          className="item"
+          onClick={[Function]}
+        >
+          Lecturers Condition
+        </a>
+      </div>
     </div>
     <div
       style={
