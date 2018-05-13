@@ -26,6 +26,7 @@ export default class Rooms extends Component {
             Classroom Building II
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 0}>
+            <Button primary floated='right'><Icon name='plus' />Add Room</Button>
             <Item.Group divided>
               <Item>
                 <Item.Content>
@@ -66,6 +67,7 @@ export default class Rooms extends Component {
             SIT Building
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 1}>
+            <Button primary floated='right'><Icon name='plus' />Add Room</Button>
             <Item.Group divided>
               <Item>
                 <Item.Content>
