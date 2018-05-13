@@ -1,7 +1,7 @@
 import React from 'react'
 import { Input, Icon, Card, Button, Item, Label, Header } from 'semantic-ui-react'
 
-const Lecturers = () => (
+const AllConditions = () => (
   <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
     <Header as='h1'>Condition Management</Header>
     <Header as='h2'>Conditions</Header>
@@ -78,4 +78,4 @@ const Lecturers = () => (
     </Card>
   </div>
 )
-export default Lecturers
+export default AllConditions
