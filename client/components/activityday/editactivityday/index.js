@@ -1,4 +1,4 @@
-import EditActivityDay from './editcondition'
+import EditActivityDay from './editactivityday'
 import { compose } from 'recompose'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'

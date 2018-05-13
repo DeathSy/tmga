@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Form, Input, Icon, Grid } from 'semantic-ui-react'
+import { Button, Form, Input, Icon, Grid , Header} from 'semantic-ui-react'
 
 class AddLecturers extends Component {
   state = {}
@@ -12,14 +12,14 @@ class AddLecturers extends Component {
       { key: 'int102', value: 'int102', text: 'INT102' }]
     return (
       <div style={{ width: '1000px', margin: '20px 360px', paddingTop: '30px' }}>
-        <h1> <Icon name='left chevron' />Create New Lecturer</h1>
+        <Header as='h1'> <Icon name='left chevron' />Create New Lecturer</Header>
         <Grid size='huge' divided='vertically'>
           <Grid.Column width={5}>
-            <h3 style={{ margin: '30px 100px' }}>First Name:</h3>
-            <h3 style={{ margin: '30px 100px' }}>Last Name:</h3>
-            <h3 style={{ margin: '30px 100px' }}>Email: </h3>
-            <h3 style={{ margin: '30px 100px' }}>Tel: </h3>
-            <h3 style={{ margin: '30px 100px' }}>Subject:</h3>
+            <Header as='h3' style={{ margin: '30px 100px' }}>First Name:</Header>
+            <Header as='h3' style={{ margin: '30px 100px' }}>Last Name:</Header>
+            <Header as='h3' style={{ margin: '30px 100px' }}>Email: </Header>
+            <Header as='h3' style={{ margin: '30px 100px' }}>Tel: </Header>
+            <Header as='h3' style={{ margin: '30px 100px' }}>Subject:</Header>
           </Grid.Column>
           <Grid.Column floated='left' width={3}>
             <Form style={{ marginTop: '25px' }}>

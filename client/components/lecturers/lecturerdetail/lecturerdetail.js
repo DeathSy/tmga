@@ -1,21 +1,21 @@
-import React, { Component } from 'react'
-import { Card, Grid, Button, Icon } from 'semantic-ui-react'
+import React from 'react'
+import { Card, Grid, Button, Icon, Header } from 'semantic-ui-react'
 
 const LecturerDetail = () => (
   <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
-    <h1> <Icon name='left chevron' />Lecturers</h1>
-    <h2 style={{ marginLeft: '35px' }}>Aj.Atchara TranUraikul</h2>
+    <Header as='h1'> <Icon name='left chevron' />Lecturers</Header>
+    <Header as='h2' style={{ marginLeft: '35px' }}>Aj.Atchara TranUraikul</Header>
     <Grid size='large' divided='vertically'>
       <Grid.Column width={4}>
-        <h3 style={{ margin: '30px 100px' }}>Name: </h3>
-        <h3 style={{ margin: '30px 100px' }}>Email:</h3>
-        <h3 style={{ margin: '30px 100px' }}>Tel:</h3>
-        <h3 style={{ margin: '30px 100px' }}>Subject:</h3>
+        <Header as='h3' style={{ margin: '30px 100px' }}>Name: </Header>
+        <Header as='h3' style={{ margin: '30px 100px' }}>Email:</Header>
+        <Header as='h3' style={{ margin: '30px 100px' }}>Tel:</Header>
+        <Header as='h3' style={{ margin: '30px 100px' }}>Subject:</Header>
       </Grid.Column>
       <Grid.Column floated='left' width={9}>
-        <h3 style={{marginTop: '30px'}}>Aj.Atchara TranUraikul</h3>
-        <h3 style={{marginTop: '30px'}}>atchara@sit.kmutt.ac.th</h3>
-        <h3 style={{marginTop: '30px'}}>024709866</h3>
+        <Header as='h3' style={{marginTop: '30px'}}>Aj.Atchara TranUraikul</Header>
+        <Header as='h3' style={{marginTop: '30px'}}>atchara@sit.kmutt.ac.th</Header>
+        <Header as='h3' style={{marginTop: '30px'}}>024709866</Header>
         <Card style={{ height: '200px', width: '340px' }} >
           <Card.Content>
             INT102

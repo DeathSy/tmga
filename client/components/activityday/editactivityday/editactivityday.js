@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Grid, Form, Icon, Select, Checkbox } from 'semantic-ui-react'
+import { Button, Grid, Form, Icon, Select, Checkbox, Header } from 'semantic-ui-react'
 const starttime = [
   { key: '8', text: '8:00', value: '8:00' },
   { key: '9', text: '9:00', value: '9:00' },
@@ -27,14 +27,14 @@ class EditActivity extends Component {
   render () {
     return (
       <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
-        <h1> <Icon name='left chevron' />Edit Activity Day</h1>
+        <Header as='h1'> <Icon name='left chevron' />Edit Activity Day</Header>
         <Grid size='huge' divided='vertically'>
           <Grid.Column width={5}>
-            <h3 style={{ margin: '30px 100px' }}>Monday:</h3>
-            <h3 style={{ margin: '30px 100px' }}>Tuesday:</h3>
-            <h3 style={{ margin: '30px 100px' }}>Wednesday: </h3>
-            <h3 style={{ margin: '30px 100px' }}>Thurday: </h3>
-            <h3 style={{ margin: '30px 100px' }}>Friday:</h3>
+            <Header as='h3' style={{ margin: '30px 100px' }}>Monday:</Header>
+            <Header as='h3' style={{ margin: '30px 100px' }}>Tuesday:</Header>
+            <Header as='h3' style={{ margin: '30px 100px' }}>Wednesday: </Header>
+            <Header as='h3' style={{ margin: '30px 100px' }}>Thurday: </Header>
+            <Header as='h3' style={{ margin: '30px 100px' }}>Friday:</Header>
           </Grid.Column>
           <Grid.Column floated='left' width={7}>
             <Form style={{ marginLeft: '-30px', marginTop: '25px' }}>

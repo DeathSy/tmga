@@ -26,6 +26,7 @@ export default class Rooms extends Component {
             Bsc.IT
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 0}>
+            <Button primary floated='right'><Icon name='plus' />Add Subject</Button>
             <Item.Group divided>
               <Item>
                 <Item.Content>
@@ -70,6 +71,7 @@ export default class Rooms extends Component {
             Bsc.CS
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 1}>
+            <Button primary floated='right'><Icon name='plus' />Add Subject</Button>
             <Item.Group divided>
               <Item>
                 <Item.Content>
