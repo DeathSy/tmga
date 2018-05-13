@@ -17,12 +17,6 @@ export const generateTimeTable = () => {
     generations: population.generations,
     maxFitness: population.maxFitness
   }
-  // const dna = new DNA()
-  // const newDNA = new DNA()
-  // newDNA.sectionBaseGenes = dna.transformToSectionBaseGene()
-  // newDNA.transfromToTimeBaseGene()
-  // newDNA.calcFitness()
-  // return {}
 }
 
 generateTimeTable()
