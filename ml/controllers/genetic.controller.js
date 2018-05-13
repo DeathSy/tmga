@@ -1,39 +1,61 @@
-// import { spawn } from 'child-process-promise'
 import path from 'path'
 import { spawn } from 'child_process'
 
+let gaStatus = 'stopped'
 let maxFitness = 0
 let errorMessage
 
 export const startGenerateSchedual = (req, res) => {
-  const projetPath = path.resolve(process.cwd())
-  const ga = spawn(`babel-node.cmd`, ['libs/genetic'], { cwd: projetPath })
-  ga.stdout.on('data', data => {
-    const stdout = parseFloat(data.toString().split('maxfitness:')[1].trim(), 10)
-    const nowFitness = Math.floor(stdout * 100)
-    if (maxFitness === 100) {
+  if (gaStatus === 'stopped') {
+    const projetPath = path.resolve(process.cwd())
+    const ga = spawn(`babel-node.cmd`, ['libs/genetic'], { cwd: projetPath })
+    gaStatus = 'running'
+    ga.stdout.on('data', data => {
+      const stdout = parseFloat(data.toString().split('maxfitness:')[1].trim(), 10)
+      const nowFitness = Math.floor(stdout * 100)
+      if (maxFitness === 100) {
+        maxFitness = 0
+      }
+      if (nowFitness > maxFitness) {
+        maxFitness = nowFitness
+      }
+      console.log('process status: ', maxFitness)
+    })
+
+    ga.on('error', error => {
       maxFitness = 0
-    }
-    if (nowFitness > maxFitness) {
-      maxFitness = nowFitness
-    }
-    console.log(maxFitness)
-  })
+      errorMessage = error
+      gaStatus = 'stopped'
+      console.log(error)
+    })
 
-  ga.on('error', error => {
-    maxFitness = 0
-    errorMessage = error
-    console.log(error)
-  })
+    ga.stderr.on('data', data => {
+      maxFitness = 0
+      errorMessage = data.toString()
+      gaStatus = 'stopped'
+    })
 
-  ga.stderr.on('data', data => {
-    maxFitness = 0
-    errorMessage = data.toString()
-  })
+    ga.on('exit', code => {
+      gaStatus = 'stopped'
+      ga.kill()
+    })
 
-  res.send({ message: 'ga is running' })
+    res
+      .status(200)
+      .send({ message: 'Successfully started GA process, to check status please visit /generate/status route' })
+  } else {
+    res
+      .status(200)
+      .send({ message: 'GA process is already running if you want to run a new task please terminate an old one, to terminate GA process please visit /generate/terminate' })
+  }
 }
 
 export const getTimetableGeneratingStatus = (req, res) => {
-  res.send({ status: maxFitness, error: errorMessage })
+  let message
+  if (gaStatus === 'stopped') message = 'GA process is not running yet, please visit /generate first to begin GA process'
+  res.status(200).send({ status: maxFitness, error: errorMessage, message })
+}
+
+export const terminateGenerating = (req, res) => {
+  res.status(500).send({ message: 'Sorry terminate is not an open feature yet' })
 }
