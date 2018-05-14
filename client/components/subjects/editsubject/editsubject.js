@@ -22,7 +22,7 @@ export default class EditSubject extends React.Component {
 
     return (
       <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
-        <h1> <Icon name='left chevron' />Subject - INT101 IT Fundamentals</h1>
+        <Header as='h1'> <Icon name='left chevron' />Subject - INT101 IT Fundamentals</Header>
         <Grid columns='equal' style={{ marginTop: 12, marginLeft: 30 }}>
           <Grid.Column width={2} verticalAlign='middle'>
             <Header>Code:</Header>
@@ -47,9 +47,9 @@ export default class EditSubject extends React.Component {
             <Form.Select
               options={typeOptions}
               fluid
-              type='tel'
-              name='tel'
-              placeholder='Lecturer tel number' />
+              type='type'
+              name='type'
+              placeholder='Type' />
           </Grid.Column>
         </Grid>
         <Grid columns='equal' style={{ marginLeft: 30 }}>
@@ -60,9 +60,9 @@ export default class EditSubject extends React.Component {
             <Form.Select
               options={timeOptions}
               fluid
-              type='email'
-              name='email'
-              placeholder='Lecturer email' />
+              type='time'
+              name='time'
+              placeholder='Time' />
           </Grid.Column>
         </Grid>
         <Grid columns='equal' style={{ marginLeft: 30 }}>
@@ -73,9 +73,9 @@ export default class EditSubject extends React.Component {
             <Form.Select
               options={roomOptions}
               fluid
-              type='email'
-              name='email'
-              placeholder='Lecturer email' />
+              type='room'
+              name='room'
+              placeholder='Room' />
           </Grid.Column>
         </Grid>
         <Grid columns='equal' style={{ marginBottom: 12, marginLeft: 30 }}>
