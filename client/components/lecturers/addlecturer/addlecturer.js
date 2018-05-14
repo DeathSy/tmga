@@ -18,8 +18,8 @@ class AddLecturers extends Component {
           <Icon style={iconStyle} name='left chevron' onClick={this.props.changeState} />
           Create New Lecturer
         </Header>
-        <Grid columns='equal' style={{ marginTop: 12 }}>
-          <Grid.Column width={3} textAlign='center' verticalAlign='middle'>
+        <Grid columns='equal' style={{ marginTop: 12, marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
             <Header>Firstname:</Header>
           </Grid.Column>
           <Grid.Column width={12}>
@@ -30,8 +30,8 @@ class AddLecturers extends Component {
               placeholder='Lecturer firstname' />
           </Grid.Column>
         </Grid>
-        <Grid columns='equal'>
-          <Grid.Column width={3} textAlign='center' verticalAlign='middle'>
+        <Grid columns='equal' style={{ marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
             <Header>Lastname:</Header>
           </Grid.Column>
           <Grid.Column width={12}>
@@ -42,8 +42,8 @@ class AddLecturers extends Component {
               placeholder='Lecturer lastname' />
           </Grid.Column>
         </Grid>
-        <Grid columns='equal'>
-          <Grid.Column width={3} textAlign='center' verticalAlign='middle'>
+        <Grid columns='equal' style={{ marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
             <Header>Tel:</Header>
           </Grid.Column>
           <Grid.Column width={12}>
@@ -54,8 +54,8 @@ class AddLecturers extends Component {
               placeholder='Lecturer tel number' />
           </Grid.Column>
         </Grid>
-        <Grid columns='equal'>
-          <Grid.Column width={3} textAlign='center' verticalAlign='middle'>
+        <Grid columns='equal' style={{ marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle' >
             <Header>E-mail:</Header>
           </Grid.Column>
           <Grid.Column width={12}>
@@ -66,8 +66,8 @@ class AddLecturers extends Component {
               placeholder='Lecturer email' />
           </Grid.Column>
         </Grid>
-        <Grid columns='equal' style={{ marginBottom: 12 }}>
-          <Grid.Column width={3} textAlign='center' verticalAlign='middle'>
+        <Grid columns='equal' style={{ marginBottom: 12, marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
             <Header>Subjects:</Header>
           </Grid.Column>
           <Grid.Column width={12}>

@@ -1,8 +1,9 @@
 import React from 'react'
-import { Grid, Button, Icon, Form, Dropdown } from 'semantic-ui-react'
+import { Grid, Button, Icon, Form, Header } from 'semantic-ui-react'
+import TagsInput from 'react-tagsinput'
 
 export default class AddSubject extends React.Component {
-  render () {
+  render() {
     const typeOptions = [
       { key: 'lecture', value: 'Lecture', text: 'Lecture' },
       { key: 'lab', value: 'Lab', text: 'Lab' }]
@@ -17,46 +18,86 @@ export default class AddSubject extends React.Component {
     return (
       <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
         <h1> <Icon name='left chevron' />Subject - INT101 IT Fundamentals</h1>
-        <Grid size='huge' divided='vertically'>
-          <Grid.Column width={4}>
-            <h3 style={{ margin: '30px 100px' }}>ID:</h3>
-            <h3 style={{ margin: '30px 100px' }}>Name:</h3>
-            <h3 style={{ margin: '30px 100px' }}>Type: </h3>
-            <h3 style={{ margin: '30px 100px' }}>Time: </h3>
-            <h3 style={{ margin: '30px 100px' }}>Room:</h3>
-            <h3 style={{ margin: '30px 100px' }}>Sections:</h3>
+        <Grid columns='equal' style={{ marginTop: 12, marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
+            <Header>Code:</Header>
           </Grid.Column>
-          <Grid.Column floated='left' width={4}>
-            <Form style={{ marginTop: '25px' }}>
-              <Form.Field>
-                <input placeholder='Subject ID' />
-              </Form.Field>
-              <Form.Field>
-                <input placeholder='Subject Name' />
-              </Form.Field>
-              <Form.Field>
-                <Dropdown placeholder='Type' selection options={typeOptions} defaultValue='Lecture' />
-              </Form.Field>
-              <Form.Field>
-                <Dropdown placeholder='Time' selection options={timeOptions} defaultValue='3' />
-              </Form.Field>
-              <Form.Field>
-                <Dropdown placeholder='Room' search selection options={roomOptions} defaultValue='CB2306' />
-              </Form.Field>
-              <Form.Field>
-                <input placeholder='Amount per a section' />
-              </Form.Field>
-              <Form.Field>
-                <Button floated='right'> <icon name='add' />Add Section</Button>
-              </Form.Field>
-            </Form>
+          <Grid.Column width={12}>
+            <Form.Input
+              fluid
+              type='text'
+              name='firstname'
+              placeholder='Lecturer firstname' />
           </Grid.Column>
         </Grid>
-        <Button primary size='large' floated='right' style={{ marginTop: '30px', marginRight: '90px' }}>
+        <Grid columns='equal' style={{ marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
+            <Header>Name:</Header>
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Form.Input
+              fluid
+              type='text'
+              name='lastname'
+              placeholder='Lecturer lastname' />
+          </Grid.Column>
+        </Grid>
+        <Grid columns='equal' style={{ marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
+            <Header>Type:</Header>
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Form.Select
+              options={typeOptions}
+              fluid
+              type='tel'
+              name='tel'
+              placeholder='Lecturer tel number' />
+          </Grid.Column>
+        </Grid>
+        <Grid columns='equal' style={{ marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle' >
+            <Header>Time:</Header>
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Form.Select
+              options={timeOptions}
+              fluid
+              type='email'
+              name='email'
+              placeholder='Lecturer email' />
+          </Grid.Column>
+        </Grid>
+        <Grid columns='equal' style={{ marginBottom: 12, marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
+            <Header>Room:</Header>
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Form.Select
+              options={roomOptions}
+              fluid
+              type='email'
+              name='email'
+              placeholder='Lecturer email' />
+          </Grid.Column>
+        </Grid>
+        <Grid columns='equal' style={{ marginBottom: 12, marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
+            <Header>Sections:</Header>
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Form.Group>
+              <Form.Field>
+                <TagsInput value={[]} />
+              </Form.Field>
+            </Form.Group>
+          </Grid.Column>
+        </Grid>
+        <Button primary size='large' floated='right' style={{ marginTop: '12px', marginRight: '90px' }}>
           Edit
           <Icon name='right chevron' />
         </Button>
-        <Button size='large' floated='right' style={{ marginTop: '30px' }}>Delete</Button>
+        <Button size='large' floated='right' style={{ marginTop: '12px' }}>Delete</Button>
       </div>
     )
   }
