@@ -1,4 +1,5 @@
 import DNA from './dna'
+import axios from 'axios'
 
 export default class Population {
   constructor (mutationRate, populationMax) {
@@ -25,6 +26,7 @@ export default class Population {
     this.population.map(dna => {
       if (dna.fitness > maxFitness) {
         maxFitness = dna.fitness
+        this.maxFitnessGene = dna
       }
     })
     this.maxFitness = maxFitness
@@ -49,5 +51,15 @@ export default class Population {
       this.population[index] = child
     })
     this.generations++
+  }
+
+  async evaluate () {
+    const { data } = await axios.post('http://localhost:4000/api/v1/periods', {
+      semester: '2/2560',
+      timetable: this.maxFitnessGene.genes,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    })
+    return data
   }
 }

@@ -7,6 +7,7 @@ import section from './section'
 import student from './student'
 import subject from './subject'
 import timeSlot from './timeslot'
+import period from './period'
 
 const router = Router()
 
@@ -21,5 +22,6 @@ router.use('/sections', section)
 router.use('/students', student)
 router.use('/subjects', subject)
 router.use('/timeSlots', timeSlot)
+router.use('/periods', period)
 
 export default router
