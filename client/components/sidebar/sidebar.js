@@ -1,49 +1,75 @@
 import React, { Component } from 'react'
+import Link from 'next/link'
 import { Sidebar, Menu, Icon } from 'semantic-ui-react'
 
 export default class SidebarMenu extends Component {
-  state = { activeItem: 'Home' } // eslint-disable-line
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
   render () {
-    const { activeItem } = this.state
-
     return (
       <Sidebar as={Menu} visible vertical inverted color='blue' style={{ width: '300px' }} >
         <Menu.Item name='Logo'>
           <Icon />
         </Menu.Item>
-        <Menu.Item
-          name='Home'
-          active={activeItem === 'Home'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name='Timetable Editor'
-          active={activeItem === 'Timetable Editor'}
-          onClick={this.handleItemClick}
-        />
-        <Menu.Item
-          name='Data Management'
-          active={activeItem === 'Data Management'}
-          onClick={this.handleItemClick}
-        />
+        <Link href={{ pathname: '/' }}>
+          <Menu.Item
+            name='Home'
+            as='a'
+            active={this.props.url.pathname === '/'}
+          />
+        </Link>
+        <Link href={{ pathname: '/TimetableList' }}>
+          <Menu.Item
+            name='Timetable Editor'
+            as='a'
+            active={this.props.url.pathname === '/TimetableList'}
+          />
+        </Link>
+        <Link href={{ pathname: '/DataManagement' }}>
+          <Menu.Item
+            name='Data Management'
+            as='a'
+            active={this.props.url.pathname === '/DataManagement'}
+          />
+        </Link>
         <Menu.Menu>
-          <Menu.Item name='Lecturers' active={activeItem === 'Lecturers'} onClick={this.handleItemClick} />
-          <Menu.Item name='Rooms' active={activeItem === 'Rooms'} onClick={this.handleItemClick} />
-          <Menu.Item name='Subjects' active={activeItem === 'Subjects'} onClick={this.handleItemClick} />
+          <Link href={{ pathname: '/AllLecturers' }}>
+            <Menu.Item
+              name='Lecturers'
+              as='a'
+              active={this.props.url.pathname === '/AllLecturers'} />
+          </Link>
+          <Link href={{ pathname: '/AllRooms' }}>
+            <Menu.Item
+              name='Rooms'
+              as='a'
+              active={this.props.url.pathname === '/AllRooms'} />
+          </Link>
+          <Link href={{ pathname: '/AllSubjects' }}>
+            <Menu.Item
+              name='Subjects'
+              as='a'
+              active={this.props.url.pathname === '/AllSubjects'} />
+          </Link>
         </Menu.Menu>
-        <Menu.Item
-          name='Condition Management'
-          active={activeItem === 'Condition Management'}
-          onClick={this.handleItemClick}
-        />
+        <Link href={{ pathname: '/ConditionManagement' }}>
+          <Menu.Item
+            name='Condition Management'
+            as='a'
+            active={this.props.url.pathname === '/ConditionManagement'} />
+        </Link>
         <Menu.Menu>
-          <Menu.Item name='Activity Day' active={activeItem === 'Activity Day'} onClick={this.handleItemClick} />
-          <Menu.Item name="Lecturer's Condition" active={activeItem === "Lecturer's Condition"} onClick={this.handleItemClick} />
+          <Link href={{ pathname: '/ViewActivityDay' }}>
+            <Menu.Item
+              name='Activity Day'
+              as='a'
+              active={this.props.url.pathname === '/ViewActivityDay'} />
+          </Link>
+          <Link href={{ pathname: '/AllConditions' }}>
+            <Menu.Item
+              name="Lecturer's Condition"
+              as='a'
+              active={this.props.url.pathname === '/AllConditions'} />
+          </Link>
         </Menu.Menu>
-
       </Sidebar>
     )
   }

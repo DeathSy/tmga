@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from '../components/sidebar'
 import withLayout from '../lib/withLayout'
 import EditActivity from '../components/activityday/editactivityday'
 
@@ -11,7 +10,6 @@ export class AllSubjects extends React.Component {
   render () {
     return (
       <div>
-        <Sidebar />
         <EditActivity />
       </div>
     )

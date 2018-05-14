@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from '../components/sidebar'
 import ConditionDetail from '../components/allconditions/conditiondetail'
 import withLayout from '../lib/withLayout'
 
@@ -11,7 +10,6 @@ export class ViewCondition extends React.Component {
   render () {
     return (
       <div>
-        <Sidebar />
         <ConditionDetail />
       </div>
     )

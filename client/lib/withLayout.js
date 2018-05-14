@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import withRedux from 'next-redux-wrapper'
 
 import makeStore from '../ducks'
+import Sidebar from '../components/sidebar'
 
 const mapStateToProps = state => ({})
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch)
@@ -15,7 +16,12 @@ export default Component => {
     }
 
     render () {
-      return <div><Component {...this.props} /></div>
+      return (
+        <div>
+          <Sidebar {...this.props} />
+          <Component {...this.props} />
+        </div>
+      )
     }
   }
 

@@ -140,7 +140,7 @@ exports[`Test Root Component should render Home component 1`] = `
               <i
                 aria-hidden="true"
                 className="green checkmark big icon"
-                textAlign="center"
+                textalign="center"
               />
             </td>
           </tr>

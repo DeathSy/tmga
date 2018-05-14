@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from '../components/sidebar'
 import TimetableList from '../components/timetablelist'
 import withLayout from '../lib/withLayout'
 
@@ -11,7 +10,6 @@ export class TtbList extends React.Component {
   render () {
     return (
       <div>
-        <Sidebar />
         <TimetableList />
       </div>
     )

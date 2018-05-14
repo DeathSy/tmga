@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from '../components/sidebar'
 import AddRoom from '../components/rooms/addroom'
 import withLayout from '../lib/withLayout'
 
@@ -11,7 +10,6 @@ export class NewRoom extends React.Component {
   render () {
     return (
       <div>
-        <Sidebar />
         <AddRoom />
       </div>
     )
