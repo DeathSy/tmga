@@ -14,7 +14,7 @@ class AddRoom extends Component {
 
   render () {
     return (
-      <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+      <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
         <h1> <Icon name='left chevron' />Edit Room</h1>
         <Grid size='huge' divided='vertically'>
           <Grid.Column width={3}>

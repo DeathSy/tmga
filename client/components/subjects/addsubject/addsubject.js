@@ -15,7 +15,7 @@ export default class AddSubject extends React.Component {
       { key: 'CB2306', value: 'CB2306', text: 'CB2306' }]
 
     return (
-      <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+      <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
         <h1> <Icon name='left chevron' />Subject - INT101 IT Fundamentals</h1>
         <Grid size='huge' divided='vertically'>
           <Grid.Column width={4}>

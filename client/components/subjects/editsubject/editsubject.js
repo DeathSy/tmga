@@ -1,18 +1,16 @@
 import React from 'react'
-import { Grid, Button, Icon, List, Form, Dropdown } from 'semantic-ui-react'
+import { Grid, Button, Icon, Form, Dropdown } from 'semantic-ui-react'
 
 export default class EditSubject extends React.Component {
   state = {
     subjectId: 'INT101',
-    subjectName: 'ITFundamentals',
+    subjectName: 'ITFundamentals'
 
   }
-  render() {
-
+  render () {
     const typeOptions = [
       { key: 'lecture', value: 'Lecture', text: 'Lecture' },
       { key: 'lab', value: 'Lab', text: 'Lab' }]
-    const type = 'Lecture'
     const timeOptions = [
       { key: '2', value: '2', text: '2 hours' },
       { key: '3', value: '3', text: '3 hours' }]
@@ -22,7 +20,7 @@ export default class EditSubject extends React.Component {
       { key: 'CB2306', value: 'CB2306', text: 'CB2306' }]
 
     return (
-      <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+      <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
         <h1> <Icon name='left chevron' />Subject - INT101 IT Fundamentals</h1>
         <Grid size='huge' divided='vertically'>
           <Grid.Column width={4}>

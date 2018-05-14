@@ -2,7 +2,7 @@ import React from 'react'
 import { Input, Icon, Card, Button, Item, Label, Header } from 'semantic-ui-react'
 
 const Lecturers = () => (
-  <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+  <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
     <Header as='h1'>Data Management</Header>
     <Header as='h2'>Lecturers</Header>
     <Card fluid scrolling >

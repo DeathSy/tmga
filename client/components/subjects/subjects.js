@@ -17,7 +17,7 @@ export default class Rooms extends Component {
     const { activeIndex } = this.state
 
     return (
-      <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+      <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
         <Topic as='h1'>Data Management</Topic>
         <Topic as='h2'>Subjects</Topic>
         <Accordion fluid styled>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Button, Icon } from 'semantic-ui-react'
 
 const RoomDetail = () => (
-  <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+  <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
     <h1> <Icon name='left chevron' />Room - CB2301</h1>
     {/* <h2 style={{ marginLeft: '35px' }}>CB2301</h2> */}
     <Grid size='huge' divided='vertically'>

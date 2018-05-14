@@ -2,7 +2,7 @@ import React from 'react'
 import { Icon, Card, Button, Grid, Header, Label, Item, Input } from 'semantic-ui-react'
 
 const ConditionManagement = () => (
-  <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+  <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
     <Header as='h1'>Condition Management</Header>
     <Header as='h2'>Activity Day</Header>
     <Card fluid scrolling >

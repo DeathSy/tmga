@@ -3,12 +3,12 @@ import { Table, Icon } from 'semantic-ui-react'
 import { Topic, TableHead, TableHeadCell, TableCellStyle } from './styles'
 
 const TimetableList = () => (
-  <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+  <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
     <Topic as='h1'>Timetable Editor</Topic>
     <Table
       basic='very'
       fixed
-      style={{ width: '1000px', overflow: 'scroll', margin: '50px' }}
+      style={{ overflow: 'scroll' }}
     >
       <TableHead>
         <Table.Row>

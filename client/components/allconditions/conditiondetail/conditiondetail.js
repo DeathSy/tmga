@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Button, Icon, Header } from 'semantic-ui-react'
 
 const ConditionDetail = () => (
-  <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+  <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
     <Header as='h1'> <Icon name='left chevron' />Conditions</Header>
     <Header as='h2' style={{ marginLeft: '35px' }}>Aj.Atchara Tranu-raikul</Header>
     <Grid size='large' divided='vertically'>

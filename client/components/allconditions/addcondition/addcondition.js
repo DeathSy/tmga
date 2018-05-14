@@ -27,7 +27,7 @@ const endtime = [
 class AddCondition extends Component {
   render () {
     return (
-      <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+      <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
         <Header as='h1'> <Icon name='left chevron' />Add New Condition</Header>
         <Grid size='huge' divided='vertically'>
           <Grid.Column width={6}>

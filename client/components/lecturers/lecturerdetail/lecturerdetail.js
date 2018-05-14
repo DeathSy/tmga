@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, Grid, Button, Icon, Header } from 'semantic-ui-react'
 
 const LecturerDetail = () => (
-  <div style={{ width: '1100px', margin: '20px 360px', paddingTop: '30px' }}>
+  <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
     <Header as='h1'> <Icon name='left chevron' />Lecturers</Header>
     <Header as='h2' style={{ marginLeft: '35px' }}>Aj.Atchara TranUraikul</Header>
     <Grid size='large' divided='vertically'>
@@ -23,7 +23,7 @@ const LecturerDetail = () => (
         </Card>
       </Grid.Column>
     </Grid>
-    <Button primary size='large' floated='right' style={{ marginTop: '30px', marginRight: '90px' }}>
+    <Button primary size='large' floated='right' style={{ marginTop: '30px' }}>
       Edit
       <Icon name='right chevron' />
     </Button>
