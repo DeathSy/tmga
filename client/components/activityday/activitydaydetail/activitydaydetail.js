@@ -3,7 +3,7 @@ import { Grid, Button, Icon, Header } from 'semantic-ui-react'
 
 const ActivityDetail = () => (
   <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
-    <Header as='h1'><Icon name='left chevron' />Conditions - Activity Day</Header>
+    <Header as='h1'>Conditions - Activity Day</Header>
     <Grid size='large' divided='vertically' >
       <Grid.Column width={4}>
         <Header as='h3' style={{ margin: '30px 100px' }}>Monday:</Header>
