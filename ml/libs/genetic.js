@@ -6,7 +6,7 @@ export const generateTimeTable = () => {
   const population = new Population(0.7, 250)
 
   // into ga loop
-  while (population.maxFitness < 0.8) {
+  while (population.maxFitness < 1) {
     population.calcFitness()
     population.naturalSelection()
     population.generate()
@@ -17,12 +17,6 @@ export const generateTimeTable = () => {
     generations: population.generations,
     maxFitness: population.maxFitness
   }
-  // const dna = new DNA()
-  // const newDNA = new DNA()
-  // newDNA.sectionBaseGenes = dna.transformToSectionBaseGene()
-  // newDNA.transfromToTimeBaseGene()
-  // newDNA.calcFitness()
-  // return {}
 }
 
 generateTimeTable()

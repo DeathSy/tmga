@@ -4,9 +4,9 @@ import {
   create,
   update,
   remove
-} from '../repositories/student.repo'
+} from '../repositories/lecturer.repo'
 
-export const getAllStudent = async (req, res) => {
+export const getAllLecturer = async (req, res) => {
   try {
     const result = await getAll(req.query)
     res.status(200).send(result)
@@ -15,7 +15,7 @@ export const getAllStudent = async (req, res) => {
   }
 }
 
-export const getStudent = async (req, res) => {
+export const getLecturer = async (req, res) => {
   try {
     const result = await get(req.id)
     res.status(200).send(result)
@@ -24,7 +24,7 @@ export const getStudent = async (req, res) => {
   }
 }
 
-export const createStudent = async (req, res) => {
+export const createLecturer = async (req, res) => {
   try {
     const result = await create(req.body)
     res.status(200).send(result)
@@ -33,7 +33,7 @@ export const createStudent = async (req, res) => {
   }
 }
 
-export const updateStudent = async (req, res) => {
+export const updateLecturer = async (req, res) => {
   try {
     const result = await update(req.id, req.body)
     res.status(200).send(result)
@@ -42,7 +42,7 @@ export const updateStudent = async (req, res) => {
   }
 }
 
-export const deleteStudent = async (req, res) => {
+export const deleteLecturer = async (req, res) => {
   try {
     const result = await remove(req.id)
     res.status(200).send(result)
