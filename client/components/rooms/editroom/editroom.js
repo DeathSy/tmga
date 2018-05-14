@@ -52,7 +52,7 @@ class AddRoom extends Component {
               fluid
               type='input'
               name='type'
-              placeholder='Type' />
+              placeholder='Quantity' />
           </Grid.Column>
         </Grid>
         <Grid columns='equal' style={{ marginLeft: 30 }}>
