@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from '../components/sidebar'
 import Subjects from '../components/datamanagement/subjects'
 import Rooms from '../components/datamanagement/rooms'
 import Lecturers from '../components/datamanagement/lecturers'
@@ -13,7 +12,6 @@ export class AllSubjects extends React.Component {
   render () {
     return (
       <div>
-        <Sidebar />
         <Subjects />
         <Lecturers />
         <Rooms />

@@ -3,8 +3,23 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 import { reducer as form } from 'redux-form'
 
+import guideline from './guideline'
+import lecturer from './lecturer'
+import room from './room'
+import section from './section'
+import student from './student'
+import subject from './subject'
+import timeSlot from './timeslot'
+
 const reducers = combineReducers({
-  form
+  form,
+  guideline,
+  lecturer,
+  room,
+  section,
+  student,
+  subject,
+  timeSlot
 })
 
 const middlewares = [thunk, logger]

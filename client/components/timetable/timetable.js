@@ -24,7 +24,7 @@ const TimetableList = () => (
         <Table.Row>
           <TableCellStyle>2/2560</TableCellStyle>
           <TableCellStyle>
-            <Icon size='big' color='green' name='checkmark' textAlign='center' />
+            <Icon size='big' color='green' name='checkmark' textalign='center' />
           </TableCellStyle>
         </Table.Row>
         <Table.Row>

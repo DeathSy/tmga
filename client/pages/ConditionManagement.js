@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from '../components/sidebar'
 import ConditionManage from '../components/conditionmanagement'
 import withLayout from '../lib/withLayout'
 
@@ -11,7 +10,6 @@ export class ConditionManagement extends React.Component {
   render () {
     return (
       <div>
-        <Sidebar />
         <ConditionManage />
       </div>
     )

@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from '../components/sidebar'
 import EditLecturer from '../components/lecturers/editlecturer'
 import withLayout from '../lib/withLayout'
 
@@ -11,7 +10,6 @@ export class EditLecturers extends React.Component {
   render () {
     return (
       <div>
-        <Sidebar />
         <EditLecturer />
       </div>
     )
