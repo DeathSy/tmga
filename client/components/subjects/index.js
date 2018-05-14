@@ -3,7 +3,9 @@ import { compose } from 'recompose'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-const mapStateToProps = state => ({})
+const mapStateToProps = ({ subject }) => ({
+  subject
+})
 
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch)
 

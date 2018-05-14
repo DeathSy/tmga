@@ -1,7 +1,7 @@
 import Subject from '../models/subject'
 
 export const getAll = async query => {
-  const result = await Subject.find({ query })
+  const result = await Subject.find()
   return result
 }
 

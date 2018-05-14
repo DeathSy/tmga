@@ -5,16 +5,28 @@ export const subjectSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  major: {
+    type: String,
+    required: true
+  },
   code: {
     type: String,
     required: true
   },
+  sections: {
+    type: Number,
+    required: true
+  },
   type: {
-    tpye: String,
+    type: String,
+    required: true
+  },
+  timeAmount: {
+    type: Number,
     required: true
   },
   prerequisite: [{
-    type: mongoose.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Subjects'
   }]
 })

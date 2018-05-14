@@ -16,6 +16,12 @@ export const roomSchema = mongoose.Schema({
   capacity: {
     type: String,
     required: true
+  },
+  createdAt: {
+    type: String
+  },
+  updatedAt: {
+    type: String
   }
 })
 

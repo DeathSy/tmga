@@ -1,7 +1,7 @@
 import Lecturer from '../models/lecturer'
 
 export const getAll = async query => {
-  const result = await Lecturer.find({ query })
+  const result = await Lecturer.find()
   return result
 }
 

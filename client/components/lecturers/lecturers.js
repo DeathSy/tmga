@@ -9,159 +9,31 @@ const Lecturers = props => (
       <Card.Content>
         <Button primary floated='right' onClick={props.changeState}><Icon name='plus' />Add</Button>
         <Input icon='search' placeholder='Search...' style={{ 'float': 'right' }} /><Item.Group divided>
-          <Item>
-            <Item.Content>
-              <Item.Header as='a'>Aj.Atchara TranU-raikul</Item.Header>
-              <Item.Extra>
-                <Button primary floated='right'>
-                  Edit
-                  <Icon name='right chevron' />
-                </Button>
-                <Button floated='right'>
-                  Delete
-                </Button>
-                <Label>INT111</Label>
-                <Label>INT112</Label>
-                <Label>INT113</Label>
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content>
-              <Item.Header as='a'>Aj.Atchara TranU-raikul</Item.Header>
-              <Item.Extra>
-                <Button primary floated='right'>
-                  Edit
-                  <Icon name='right chevron' />
-                </Button>
-                <Button floated='right'>
-                  Delete
-                </Button>
-                <Label>INT111</Label>
-                <Label>INT112</Label>
-                <Label>INT113</Label>
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content>
-              <Item.Header as='a'>Aj.Atchara TranU-raikul</Item.Header>
-              <Item.Extra>
-                <Button primary floated='right'>
-                  Edit
-                  <Icon name='right chevron' />
-                </Button>
-                <Button floated='right'>
-                  Delete
-                </Button>
-                <Label>INT111</Label>
-                <Label>INT112</Label>
-                <Label>INT113</Label>
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content>
-              <Item.Header as='a'>Aj.Atchara TranU-raikul</Item.Header>
-              <Item.Extra>
-                <Button primary floated='right'>
-                  Edit
-                  <Icon name='right chevron' />
-                </Button>
-                <Button floated='right'>
-                  Delete
-                </Button>
-                <Label>INT111</Label>
-                <Label>INT112</Label>
-                <Label>INT113</Label>
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content>
-              <Item.Header as='a'>Aj.Atchara TranU-raikul</Item.Header>
-              <Item.Extra>
-                <Button primary floated='right'>
-                  Edit
-                  <Icon name='right chevron' />
-                </Button>
-                <Button floated='right'>
-                  Delete
-                </Button>
-                <Label>INT111</Label>
-                <Label>INT112</Label>
-                <Label>INT113</Label>
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content>
-              <Item.Header as='a'>Aj.Atchara TranU-raikul</Item.Header>
-              <Item.Extra>
-                <Button primary floated='right'>
-                  Edit
-                  <Icon name='right chevron' />
-                </Button>
-                <Button floated='right'>
-                  Delete
-                </Button>
-                <Label>INT111</Label>
-                <Label>INT112</Label>
-                <Label>INT113</Label>
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content>
-              <Item.Header as='a'>Aj.Atchara TranU-raikul</Item.Header>
-              <Item.Extra>
-                <Button primary floated='right'>
-                  Edit
-                  <Icon name='right chevron' />
-                </Button>
-                <Button floated='right'>
-                  Delete
-                </Button>
-                <Label>INT111</Label>
-                <Label>INT112</Label>
-                <Label>INT113</Label>
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content>
-              <Item.Header as='a'>Aj.Atchara TranU-raikul</Item.Header>
-              <Item.Extra>
-                <Button primary floated='right'>
-                  Edit
-                  <Icon name='right chevron' />
-                </Button>
-                <Button floated='right'>
-                  Delete
-                </Button>
-                <Label>INT111</Label>
-                <Label>INT112</Label>
-                <Label>INT113</Label>
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content>
-              <Item.Header as='a'>Aj.Atchara TranU-raikul</Item.Header>
-              <Item.Extra>
-                <Button primary floated='right'>
-                  Edit
-                  <Icon name='right chevron' />
-                </Button>
-                <Button floated='right'>
-                  Delete
-                </Button>
-                <Label>INT111</Label>
-                <Label>INT112</Label>
-                <Label>INT113</Label>
-              </Item.Extra>
-            </Item.Content>
-          </Item>
+          {props.lecturer.allLecturers.length === 0 &&
+            <Item>
+              <Item.Content>
+                No lecturer in system yet
+              </Item.Content>
+            </Item>}
+          {props.lecturer.allLecturers.map(lecturer => (
+            <Item>
+              <Item.Content>
+                <Item.Header as='a'>{lecturer.name} {lecturer.lastname}</Item.Header>
+                <Item.Extra>
+                  <Button primary floated='right'>
+                    Edit
+                    <Icon name='right chevron' />
+                  </Button>
+                  <Button floated='right'>
+                    Delete
+                  </Button>
+                  {lecturer.teachSubjects.map(sub => (
+                    <Label>{sub}</Label>
+                  ))}
+                </Item.Extra>
+              </Item.Content>
+            </Item>
+          ))}
         </Item.Group>
       </Card.Content>
     </Card>

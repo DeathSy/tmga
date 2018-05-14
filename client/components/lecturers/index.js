@@ -3,8 +3,10 @@ import { compose } from 'recompose'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-const mapStateToProps = state => ({})
+const mapStateToProps = ({ lecturer }) => ({ lecturer })
 
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch)
 
-export default compose(connect(mapStateToProps, mapDispatchToProps))(Lecturers)
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps)
+)(Lecturers)

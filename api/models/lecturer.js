@@ -5,9 +5,13 @@ export const lecturerSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  lastname: {
+    type: String,
+    required: true
+  },
   teachSubjects: [{
-    type: mongoose.Schema.ObjectId,
-    ref: 'Sections'
+    type: String,
+    required: true
   }],
   createdAt: String,
   updatedAt: String

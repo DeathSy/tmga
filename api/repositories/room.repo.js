@@ -1,7 +1,7 @@
 import Room from '../models/room'
 
 export const getAll = async query => {
-  const result = await Room.find({ query })
+  const result = await Room.find()
   return result
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Icon, Button, Item, Label, Accordion } from 'semantic-ui-react'
+import _ from 'lodash'
 import { Topic } from './styles'
 
 export default class Rooms extends Component {
@@ -13,104 +14,56 @@ export default class Rooms extends Component {
     this.setState({ activeIndex: newIndex })
   }
 
-  render () {
+  render() {
     const { activeIndex } = this.state
+    const { allSubjects } = this.props.subject
+    const majors = _.uniq(allSubjects.map(subject => subject.major))
+
+    console.log(majors)
 
     return (
       <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
         <Topic as='h1'>Data Management</Topic>
         <Topic as='h2'>Subjects</Topic>
         <Accordion fluid styled>
-          <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>
-            <Icon name='dropdown' />
-            Bsc.IT
-          </Accordion.Title>
-          <Accordion.Content active={activeIndex === 0}>
-            <Button primary floated='right'><Icon name='plus' />Add Subject</Button>
-            <Item.Group divided>
-              <Item>
-                <Item.Content>
-                  <Item.Header as='a'>INT 101 IT Fundamentals</Item.Header>
-                  <Item.Extra>
-                    <Button primary floated='right' size='tiny'>
-                      Edit
-                      <Icon name='right chevron' />
-                    </Button>
-                    <Button floated='right' size='tiny'>
-                      Delete
-                    </Button>
-                    <Label><Icon name='write' />Lecture</Label>
-                    <Label><Icon name='time' /> 3 hours</Label>
-                    <Label><Icon name='building outline' /> CB2306</Label>
-                    <Label><Icon name='users' /> 3 Sections</Label>
-                  </Item.Extra>
-                </Item.Content>
-              </Item>
-              <Item>
-                <Item.Content>
-                  <Item.Header as='a'>INT 101 IT Fundamentals</Item.Header>
-                  <Item.Extra>
-                    <Button primary floated='right' size='tiny'>
-                      Edit
-                      <Icon name='right chevron' />
-                    </Button>
-                    <Button floated='right' size='tiny'>
-                      Delete
-                    </Button>
-                    <Label><Icon name='write' />Lecture</Label>
-                    <Label><Icon name='time' /> 3 hours</Label>
-                    <Label><Icon name='building outline' /> CB2306</Label>
-                    <Label><Icon name='users' /> 3 Sections</Label>
-                  </Item.Extra>
-                </Item.Content>
-              </Item>
-            </Item.Group>
-          </Accordion.Content>
-          <Accordion.Title active={activeIndex === 1} index={1} onClick={this.handleClick}>
-            <Icon name='dropdown' />
-            Bsc.CS
-          </Accordion.Title>
-          <Accordion.Content active={activeIndex === 1}>
-            <Button primary floated='right'><Icon name='plus' />Add Subject</Button>
-            <Item.Group divided>
-              <Item>
-                <Item.Content>
-                  <Item.Header as='a'>INT 101 IT Fundamentals</Item.Header>
-                  <Item.Extra>
-                    <Button primary floated='right' size='tiny'>
-                      Edit
-                      <Icon name='right chevron' />
-                    </Button>
-                    <Button floated='right' size='tiny'>
-                      Delete
-                    </Button>
-                    <Label><Icon name='write' />Lecture</Label>
-                    <Label><Icon name='time' /> 3 hours</Label>
-                    <Label><Icon name='building outline' /> CB2306</Label>
-                    <Label><Icon name='users' /> 3 Sections</Label>
-                  </Item.Extra>
-                </Item.Content>
-              </Item>
-              <Item>
-                <Item.Content>
-                  <Item.Header as='a'>INT 101 IT Fundamentals</Item.Header>
-                  <Item.Extra>
-                    <Button primary floated='right' size='tiny'>
-                      Edit
-                      <Icon name='right chevron' />
-                    </Button>
-                    <Button floated='right' size='tiny'>
-                      Delete
-                    </Button>
-                    <Label><Icon name='write' />Lecture</Label>
-                    <Label><Icon name='time' /> 3 hours</Label>
-                    <Label><Icon name='building outline' /> CB2306</Label>
-                    <Label><Icon name='users' /> 3 Sections</Label>
-                  </Item.Extra>
-                </Item.Content>
-              </Item>
-            </Item.Group>
-          </Accordion.Content>
+          {majors.map((major, index) => (
+            <div>
+              <Accordion.Title active={activeIndex === index} index={index} onClick={this.handleClick}>
+                <Icon name='dropdown' />
+                {major}
+              </Accordion.Title>
+              <Accordion.Content active={activeIndex === index}>
+                <Button
+                  primary
+                  floated='right'
+                  onClick={this.props.changeState('BSc.IT')}>
+                  <Icon name='plus' />
+                  Add Subject
+                </Button>
+                <Item.Group divided>
+                  {allSubjects.filter(subject => subject.major === major).map(subject => (
+                    <Item key={subject._id}>
+                      <Item.Content>
+                        <Item.Header as='a'>{subject.code} {subject.name}</Item.Header>
+                        <Item.Extra>
+                          <Button primary floated='right' size='tiny'>
+                            Edit
+                            <Icon name='right chevron' />
+                          </Button>
+                          <Button floated='right' size='tiny'>
+                            Delete
+                          </Button>
+                          <Label><Icon name='write' />{subject.type}</Label>
+                          <Label><Icon name='time' />{subject.timeAmount} hours</Label>
+                          <Label><Icon name='users' />{subject.sections} Sections</Label>
+                        </Item.Extra>
+                      </Item.Content>
+                    </Item>
+                  ))}
+                </Item.Group>
+              </Accordion.Content>
+            </div>
+          ))}
         </Accordion>
       </div>
     )

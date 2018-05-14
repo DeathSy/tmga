@@ -11,6 +11,7 @@ export const get = async id => {
 }
 
 export const create = async section => {
+  console.log(section)
   const result = await Section.create(section)
   return result
 }
