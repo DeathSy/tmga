@@ -1,30 +1,73 @@
 import React from 'react'
-import { Grid, Button, Icon, Header } from 'semantic-ui-react'
+import { Grid, Button, Icon, Header, Card } from 'semantic-ui-react'
 
 const ActivityDetail = () => (
   <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
     <Header as='h1'>Conditions - Activity Day</Header>
-    <Grid size='large' divided='vertically' >
-      <Grid.Column width={4}>
-        <Header as='h3' style={{ margin: '30px 100px' }}>Monday:</Header>
-        <Header as='h3' style={{ margin: '30px 100px' }}>Tuesday:</Header>
-        <Header as='h3' style={{ margin: '30px 100px' }}>Wednesday:</Header>
-        <Header as='h3' style={{ margin: '30px 100px' }}>Thursday:</Header>
-        <Header as='h3' style={{ margin: '30px 100px' }}>Friday:</Header>
-      </Grid.Column>
-      <Grid.Column floated='left' width={9} >
-        <Header as='h3' style={{ marginTop: '30px' }}><Icon name='x' color='red' />13:00-17:00</Header>
-        <Header as='h3' style={{ marginTop: '30px' }}><Icon name='checkmark' color='green' />All day</Header>
-        <Header as='h3' style={{ marginTop: '30px' }}><Icon name='checkmark' color='green' />All day</Header>
-        <Header as='h3' style={{ marginTop: '30px' }}><Icon name='checkmark' color='green' />All Day</Header>
-        <Header as='h3' style={{ marginTop: '30px' }}><Icon name='checkmark' color='green' />All Day</Header>
-      </Grid.Column>
-    </Grid>
-    <Button primary size='large' floated='right' style={{ marginTop: '30px', marginRight: '90px' }}>
-      Edit
-      <Icon name='right chevron' />
-    </Button>
-    <Button size='large' floated='right' style={{ marginTop: '30px' }}>Delete</Button>
+    <Card fluid>
+      <Card.Content>
+        <Grid columns='equal' style={{ marginTop: 12, marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
+            <Header>Monday:</Header>
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Header as='h3'>
+              <Icon name='x' color='red' />
+              13:00-17:00
+            </Header>
+          </Grid.Column>
+        </Grid>
+        <Grid columns='equal' style={{ marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
+            <Header>Tuesday</Header>
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Header as='h3'>
+              <Icon name='checkmark' color='green' />
+                All day
+            </Header>
+          </Grid.Column>
+        </Grid>
+        <Grid columns='equal' style={{ marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
+            <Header>Wednesday</Header>
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Header as='h3'>
+              <Icon name='checkmark' color='green' />
+                All day
+            </Header>
+          </Grid.Column>
+        </Grid>
+        <Grid columns='equal' style={{ marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
+            <Header>Thursday</Header>
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Header as='h3'>
+              <Icon name='checkmark' color='green' />
+                All day
+            </Header>
+          </Grid.Column>
+        </Grid>
+        <Grid columns='equal' style={{ marginLeft: 30 }}>
+          <Grid.Column width={2} verticalAlign='middle'>
+            <Header>Friday</Header>
+          </Grid.Column>
+          <Grid.Column width={12}>
+            <Header as='h3'>
+              <Icon name='checkmark' color='green' />
+                All day
+            </Header>
+          </Grid.Column>
+        </Grid>
+        <Button primary size='large' floated='right' style={{ margin: '12px' }}>
+          Edit
+          <Icon name='right chevron' />
+        </Button>
+        <Button size='large' floated='right' style={{ marginTop: '12px' }}>Delete</Button>
+      </Card.Content>
+    </Card>
   </div>
 )
 
