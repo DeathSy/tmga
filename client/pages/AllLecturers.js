@@ -3,13 +3,10 @@ import Lecturers from '../components/lecturers'
 import AddLecturer from '../components/lecturers/addlecturer'
 import withLayout from '../lib/withLayout'
 
-
 export class AllLecturers extends React.Component {
   static async getInitialProps(ctx) {
     return {}
-    return {}
   }
-
 
   constructor(props) {
     super(props)
@@ -32,3 +29,4 @@ export class AllLecturers extends React.Component {
       </div>
     )
   }
+}
