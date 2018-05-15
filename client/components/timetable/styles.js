@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { TableCell, TableHeader, TableHeaderCell, Header } from 'semantic-ui-react'
+import { TableCell, TableHeader, TableHeaderCell, Header, Table } from 'semantic-ui-react'
 
 export const Topic = styled(Header)`
   margin: 500px;
@@ -13,6 +13,6 @@ export const TableHeadCell = styled(TableHeaderCell)`
   padding-left: 20px;
 `
 
-export const TableCellStyle = styled(TableCell)`
+export const TableCellStyle = styled(Table.Cell)`
   padding-left: 25px;
 `

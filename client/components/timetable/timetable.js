@@ -27,11 +27,9 @@ const TimetableList = props => (
             <TableCellStyle>No timetable created now</TableCellStyle>
           </Table.Row>}
         {props.period.allTimetables.slice(0).reverse().map(period => (
-          <Table.Row key={period._id}>
+          <Table.Row key={period._id} onClick={props.onClick(period._id)}>
             <TableCellStyle>
-              <Link href={{ pathname: '/timetable', query: period._id }}>
-                {period.semester}
-              </Link>
+              {period.semester}
             </TableCellStyle>
             <TableCellStyle>
               <Icon size='big' color='green' name='checkmark' textalign='center' />
