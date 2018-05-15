@@ -30,12 +30,12 @@ const timeSlots = [
   { key: '19', value: '17:00-17:30' },
   { key: '20', value: '17:30-18:00' },
   { key: '21', value: '18:00-18:30' }
-
 ]
-const TimetableResult = () => (
+
+const TimetableResult = props => (
   <div style={{ margin: '20px 40px 20px 360px', paddingTop: '30px' }}>
     <Header as='h1'>Timetable Scheduling Processes</Header>
-    <Modal size={'fullscreen'} open={'true'} onClose={this.close}>
+    <Modal size={'fullscreen'} open={props.modalStatus} onClose={props.handleClose}>
       <Modal.Header>
         Timetable (2/2562)- BSc.IT
       </Modal.Header>
@@ -47,14 +47,14 @@ const TimetableResult = () => (
               <Table.HeaderCell colSpan={21} textAlign='center'>Time</Table.HeaderCell>
             </Table.Row>
             <Table.Row>
-              {timeSlots.map(t => (
-                <Table.HeaderCell>{t.value}</Table.HeaderCell>
+              {timeSlots.map((t, index) => (
+                <Table.HeaderCell key={index}>{t.value}</Table.HeaderCell>
               ))}
             </Table.Row>
           </Table.Header>
           <Table.Body>
-            {days.map(d => (
-              <Table.Row>
+            {days.map((d, index) => (
+              <Table.Row key={index}>
                 <Table.Cell>{d.value}</Table.Cell>
               </Table.Row>
             ))}

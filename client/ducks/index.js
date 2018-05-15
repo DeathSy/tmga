@@ -10,6 +10,7 @@ import section from './section'
 import student from './student'
 import subject from './subject'
 import timeSlot from './timeslot'
+import period from './period'
 
 const reducers = combineReducers({
   form,
@@ -19,7 +20,8 @@ const reducers = combineReducers({
   section,
   student,
   subject,
-  timeSlot
+  timeSlot,
+  period
 })
 
 const middlewares = [thunk, logger]

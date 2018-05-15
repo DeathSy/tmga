@@ -11,15 +11,19 @@ export const startGenerateSchedual = (req, res) => {
     const ga = spawn(`babel-node.cmd`, ['libs/genetic'], { cwd: projetPath })
     gaStatus = 'running'
     ga.stdout.on('data', data => {
-      const stdout = parseFloat(data.toString().split('maxfitness:')[1].trim(), 10)
-      const nowFitness = Math.floor(stdout * 100)
-      if (maxFitness === 100) {
-        maxFitness = 0
+      if (data.toString().split('maxfitness:').length > 1) {
+        const stdout = parseFloat(data.toString().split('maxfitness:')[1].trim(), 10)
+        const nowFitness = Math.floor(stdout * 100)
+        if (maxFitness === 100) {
+          maxFitness = 0
+        }
+        if (nowFitness > maxFitness) {
+          maxFitness = nowFitness
+        }
+        console.log('process status: ', maxFitness)
+      } else {
+        console.log(data.toString())
       }
-      if (nowFitness > maxFitness) {
-        maxFitness = nowFitness
-      }
-      console.log('process status: ', maxFitness)
     })
 
     ga.on('error', error => {
