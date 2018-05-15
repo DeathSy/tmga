@@ -1,9 +1,10 @@
 import { Router } from 'express'
-import { getAllPeriod, createPeriod } from '../controllers/period.controller'
+import { getAllPeriod, createPeriod, getPeriod } from '../controllers/period.controller'
 
 const router = Router()
 
 router.get('/', getAllPeriod)
+router.get('/:id', getPeriod)
 router.post('/', createPeriod)
 
 export default router

@@ -49,23 +49,23 @@ const studyRooms = [
 ]
 
 const sections = [
-  { name: 'IT Fundamental', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }, { _id: '', name: 'Mr.Pichet' }], timeLimit: 180, type: 'lecture', code: 'INT101-A-LE' },
-  { name: 'IT Fundamental', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }, { _id: '', name: 'Mr.Pichet' }], timeLimit: 180, type: 'lecture', code: 'INT101-B-LE' },
-  { name: 'IT Fundamental', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }, { _id: '', name: 'Mr.Pichet' }], timeLimit: 180, type: 'lecture', code: 'INT101-C-LE' },
-  { name: 'Computer Programming 1', lecturers: [{ _id: '', name: 'Dr.Umaporn' }], timeLimit: 120, type: 'lab', code: 'INT102-A-LA' },
-  { name: 'Computer Programming 1', lecturers: [{ _id: '', name: 'Dr.Pisarn' }], timeLimit: 120, type: 'lab', code: 'INT102-B-LA' },
-  { name: 'Computer Programming 1', lecturers: [{ _id: '', name: 'Dr.Umaporn' }], timeLimit: 120, type: 'lab', code: 'INT102-C-LA' },
-  { name: 'Computer Programming 1', lecturers: [{ _id: '', name: 'Dr.Pisarn' }], timeLimit: 120, type: 'lab', code: 'INT102-D-LA' },
-  { name: 'Discrete Mathematics', lecturers: [{ _id: '', name: 'Mr.Olarn' }], timeLimit: 180, type: 'lecture', code: 'INT104-A-LE' },
-  { name: 'Discrete Mathematics', lecturers: [{ _id: '', name: 'Mr.Olarn' }], timeLimit: 180, type: 'lecture', code: 'INT104-B-LE' },
-  { name: 'Discrete Mathematics', lecturers: [{ _id: '', name: 'Mr.Olarn' }], timeLimit: 180, type: 'lecture', code: 'INT104-C-LE' },
-  { name: 'Big Data Analysist', lecturers: [{ _id: '', name: 'Dr.Pisarn' }], timeLimit: 180, type: 'lab', code: 'INT492-A-LE' },
-  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Pichai' }], timeLimit: 120, type: 'lecture', code: 'INT201-A-LE' },
-  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Pichai' }], timeLimit: 120, type: 'lecture', code: 'INT201-B-LE' },
-  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }], timeLimit: 120, type: 'lab', code: 'INT201-A-LA' },
-  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }], timeLimit: 120, type: 'lab', code: 'INT201-B-LA' },
-  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }], timeLimit: 120, type: 'lab', code: 'INT201-C-LA' },
-  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }], timeLimit: 120, type: 'lab', code: 'INT201-D-LA' }
+  { name: 'IT Fundamental', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }, { _id: '', name: 'Mr.Pichet' }], timeLimit: 180, major: 'BSc.IT', type: 'lecture', code: 'INT101-A-LE' },
+  { name: 'IT Fundamental', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }, { _id: '', name: 'Mr.Pichet' }], timeLimit: 180, major: 'BSc.IT', type: 'lecture', code: 'INT101-B-LE' },
+  { name: 'IT Fundamental', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }, { _id: '', name: 'Mr.Pichet' }], timeLimit: 180, major: 'BSc.IT', type: 'lecture', code: 'INT101-C-LE' },
+  { name: 'Computer Programming 1', lecturers: [{ _id: '', name: 'Dr.Umaporn' }], timeLimit: 120, type: 'lab', major: 'BSc.IT', code: 'INT102-A-LA' },
+  { name: 'Computer Programming 1', lecturers: [{ _id: '', name: 'Dr.Pisarn' }], timeLimit: 120, type: 'lab', major: 'BSc.IT', code: 'INT102-B-LA' },
+  { name: 'Computer Programming 1', lecturers: [{ _id: '', name: 'Dr.Umaporn' }], timeLimit: 120, type: 'lab', major: 'BSc.IT', code: 'INT102-C-LA' },
+  { name: 'Computer Programming 1', lecturers: [{ _id: '', name: 'Dr.Pisarn' }], timeLimit: 120, type: 'lab', major: 'BSc.IT', code: 'INT102-D-LA' },
+  { name: 'Discrete Mathematics', lecturers: [{ _id: '', name: 'Mr.Olarn' }], timeLimit: 180, type: 'lecture', major: 'BSc.IT', code: 'INT104-A-LE' },
+  { name: 'Discrete Mathematics', lecturers: [{ _id: '', name: 'Mr.Olarn' }], timeLimit: 180, type: 'lecture', major: 'BSc.IT', code: 'INT104-B-LE' },
+  { name: 'Discrete Mathematics', lecturers: [{ _id: '', name: 'Mr.Olarn' }], timeLimit: 180, type: 'lecture', major: 'BSc.IT', code: 'INT104-C-LE' },
+  { name: 'Big Data Analysist', lecturers: [{ _id: '', name: 'Dr.Pisarn' }], timeLimit: 180, type: 'lab', major: 'BSc.IT', code: 'INT492-A-LE' },
+  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Pichai' }], timeLimit: 120, type: 'lecture', major: 'BSc.IT', code: 'INT201-A-LE' },
+  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Pichai' }], timeLimit: 120, type: 'lecture', major: 'BSc.IT', code: 'INT201-B-LE' },
+  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }], timeLimit: 120, type: 'lab', major: 'BSc.IT', code: 'INT201-A-LA' },
+  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }], timeLimit: 120, type: 'lab', major: 'BSc.IT', code: 'INT201-B-LA' },
+  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }], timeLimit: 120, type: 'lab', major: 'BSc.IT', code: 'INT201-C-LA' },
+  { name: 'Network 1', lecturers: [{ _id: '', name: 'Mr.Kittiphan' }], timeLimit: 120, type: 'lab', major: 'BSc.IT', code: 'INT201-D-LA' }
 ]
 
 export default class DNA {

@@ -9,6 +9,15 @@ export const getAllPeriod = async (req, res) => {
   }
 }
 
+export const getPeriod = async (req, res) => {
+  try {
+    const result = await Periods.findById(req.id)
+    res.status(200).send(result)
+  } catch (err) {
+    res.status(500).send(err)
+  }
+}
+
 export const createPeriod = async (req, res) => {
   try {
     const result = await Periods.create(req.body)
